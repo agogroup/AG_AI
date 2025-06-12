@@ -1,0 +1,351 @@
+# プロジェクト開発ガイドライン
+
+## 基本方針
+- **言語**: コード内のコメントや説明は日本語を優先
+- **開発手法**: モダンな開発手法を採用し、保守性と可読性を最重視
+- **汎用性**: 様々なプロジェクトタイプに適用可能な設計
+
+## コーディング規約
+
+### 基本スタイル
+- インデント: スペース2個
+- 行末にセミコロンを使用
+- 1行の最大文字数: 100文字（日本語コメントは除く）
+- ファイルの最後に改行を含める
+
+### 命名規則
+```
+// 変数・関数名: キャメルケース（英語）
+const userName = "田中太郎"; // ユーザー名
+
+// クラス名: パスカルケース（英語）
+class UserManager { // ユーザー管理クラス
+  // メソッド名: キャメルケース
+  getUserById(id) { // IDでユーザーを取得
+    // 実装
+  }
+}
+
+// 定数: アッパースネークケース
+const MAX_RETRY_COUNT = 3; // 最大リトライ回数
+
+// ファイル名: ケバブケース
+// user-manager.js, api-client.ts
+```
+
+### コメント規則
+```javascript
+/**
+ * ユーザー情報を取得する
+ * @param {string} userId - ユーザーID
+ * @returns {Object} ユーザー情報オブジェクト
+ */
+function getUser(userId) {
+  // 入力値の検証
+  if (!userId) {
+    throw new Error('ユーザーIDが必要です');
+  }
+  
+  // TODO: データベースから取得する処理を実装
+  // FIXME: エラーハンドリングを改善
+}
+```
+
+## ファイル・フォルダ構造
+
+### 推奨ディレクトリ構成
+```
+project-root/
+├── src/                    # ソースコード
+│   ├── components/         # UIコンポーネント
+│   ├── services/          # ビジネスロジック
+│   ├── utils/             # ユーティリティ関数
+│   ├── types/             # 型定義（TypeScript）
+│   └── assets/            # 静的リソース
+├── tests/                 # テストコード
+├── docs/                  # ドキュメント
+├── scripts/               # ビルド・デプロイスクリプト
+├── config/                # 設定ファイル
+└── public/                # 公開ファイル
+```
+
+### ファイル命名規則
+- コンポーネント: `ComponentName.jsx` / `ComponentName.tsx`
+- テストファイル: `*.test.js` / `*.spec.ts`
+- 設定ファイル: `*.config.js`
+- 環境変数: `.env.*`
+
+## Git運用ルール
+
+### コミットメッセージ
+```
+<種別>: <変更内容の要約>
+
+<詳細な説明（必要に応じて）>
+
+例:
+feat: ユーザー認証機能を追加
+fix: ログイン時のエラーハンドリングを修正
+docs: READMEにインストール手順を追加
+style: コードフォーマットを統一
+refactor: ユーザーサービスのリファクタリング
+test: ユーザー認証のテストを追加
+chore: 依存関係を更新
+```
+
+### ブランチ命名規則
+- 機能追加: `feature/機能名-説明`
+- バグ修正: `fix/バグ内容-説明`
+- ホットフィックス: `hotfix/緊急修正内容`
+- リリース: `release/バージョン番号`
+
+### PR（プルリクエスト）作成ガイドライン
+```markdown
+## 概要
+この変更で何を実現したかを簡潔に説明
+
+## 変更内容
+- 変更点1
+- 変更点2
+
+## テスト方法
+1. テスト手順1
+2. テスト手順2
+
+## チェックリスト
+- [ ] コードレビューを依頼した
+- [ ] テストを実行した
+- [ ] ドキュメントを更新した
+```
+
+## AI開発支援最適化
+
+### Claude Codeとの連携
+```javascript
+// 関数の目的と処理内容を明確に記述
+/**
+ * 商品の在庫数を更新する
+ * 
+ * この関数は以下の処理を行います：
+ * 1. 入力値の検証
+ * 2. データベースの在庫数を更新
+ * 3. 更新履歴を記録
+ * 
+ * @param {string} productId - 商品ID
+ * @param {number} quantity - 更新する在庫数
+ * @returns {Promise<boolean>} 更新成功時はtrue
+ */
+async function updateStock(productId, quantity) {
+  // 実装
+}
+```
+
+### エラーハンドリング
+```javascript
+try {
+  const result = await riskyOperation();
+  return result;
+} catch (error) {
+  // エラーの種類に応じた処理
+  if (error instanceof ValidationError) {
+    console.error('入力値エラー:', error.message);
+    throw new Error('入力値を確認してください');
+  } else if (error instanceof NetworkError) {
+    console.error('ネットワークエラー:', error.message);
+    throw new Error('通信エラーが発生しました');
+  } else {
+    console.error('予期しないエラー:', error);
+    throw new Error('システムエラーが発生しました');
+  }
+}
+```
+
+## セキュリティ対策
+
+### 機密情報の管理
+```javascript
+// ❌ 悪い例
+const API_KEY = "sk-1234567890abcdef";
+
+// ✅ 良い例
+const API_KEY = process.env.API_KEY;
+```
+
+### .gitignoreの設定
+```
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# 依存関係
+node_modules/
+vendor/
+
+# ビルド成果物
+dist/
+build/
+*.log
+
+# IDE設定
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS固有ファイル
+.DS_Store
+Thumbs.db
+
+# 機密情報
+*.key
+*.pem
+secrets/
+```
+
+### 環境変数の使用
+```javascript
+// config/index.js
+module.exports = {
+  api: {
+    baseUrl: process.env.API_BASE_URL || 'http://localhost:3000',
+    key: process.env.API_KEY,
+    timeout: parseInt(process.env.API_TIMEOUT || '5000', 10),
+  },
+  database: {
+    host: process.env.DB_HOST || 'localhost',
+    port: parseInt(process.env.DB_PORT || '5432', 10),
+    name: process.env.DB_NAME || 'development',
+  },
+};
+```
+
+## パフォーマンス最適化
+
+### 効率的なコード記述
+```javascript
+// ❌ 非効率な例
+const result = [];
+for (let i = 0; i < items.length; i++) {
+  if (items[i].isActive) {
+    result.push(items[i].name);
+  }
+}
+
+// ✅ 効率的な例
+const result = items
+  .filter(item => item.isActive)
+  .map(item => item.name);
+```
+
+### メモリ管理
+```javascript
+// 大きなデータを扱う際の注意点
+class DataProcessor {
+  constructor() {
+    this.cache = new Map();
+  }
+  
+  // キャッシュサイズを制限
+  addToCache(key, value) {
+    if (this.cache.size >= 1000) {
+      // 最も古いエントリを削除
+      const firstKey = this.cache.keys().next().value;
+      this.cache.delete(firstKey);
+    }
+    this.cache.set(key, value);
+  }
+  
+  // 不要になったらクリア
+  cleanup() {
+    this.cache.clear();
+  }
+}
+```
+
+### 非同期処理の最適化
+```javascript
+// ❌ 順次実行（遅い）
+const user = await getUser(userId);
+const posts = await getPosts(userId);
+const comments = await getComments(userId);
+
+// ✅ 並列実行（速い）
+const [user, posts, comments] = await Promise.all([
+  getUser(userId),
+  getPosts(userId),
+  getComments(userId),
+]);
+```
+
+## テスト戦略
+
+### テストファイル構成
+```
+tests/
+├── unit/           # 単体テスト
+├── integration/    # 統合テスト
+├── e2e/           # E2Eテスト
+└── fixtures/      # テストデータ
+```
+
+### テストコード例
+```javascript
+// user.test.js
+describe('ユーザー管理機能', () => {
+  describe('ユーザー作成', () => {
+    it('正常にユーザーを作成できること', async () => {
+      const userData = {
+        name: '田中太郎',
+        email: 'tanaka@example.com',
+      };
+      
+      const user = await createUser(userData);
+      
+      expect(user).toBeDefined();
+      expect(user.name).toBe(userData.name);
+      expect(user.email).toBe(userData.email);
+    });
+    
+    it('必須項目が不足している場合はエラーになること', async () => {
+      const userData = { name: '田中太郎' };
+      
+      await expect(createUser(userData))
+        .rejects
+        .toThrow('メールアドレスは必須です');
+    });
+  });
+});
+```
+
+### カバレッジ目標
+- 単体テスト: 80%以上
+- 統合テスト: 重要な業務フローをカバー
+- E2Eテスト: 主要なユーザーシナリオをカバー
+
+## 追加の推奨事項
+
+### ドキュメント作成
+- README.md: プロジェクト概要、セットアップ手順、使用方法
+- API.md: API仕様書
+- CONTRIBUTING.md: 貢献者向けガイドライン
+- CHANGELOG.md: 変更履歴
+
+### コードレビューチェックリスト
+- [ ] コーディング規約に準拠している
+- [ ] 適切なエラーハンドリングがある
+- [ ] テストが書かれている
+- [ ] ドキュメントが更新されている
+- [ ] パフォーマンスへの影響を考慮している
+- [ ] セキュリティリスクがない
+
+### 継続的改善
+- 定期的なコードレビュー
+- リファクタリングの実施
+- 依存関係の更新
+- パフォーマンス計測と改善
+
+---
+
+このガイドラインは、プロジェクトの成長に応じて継続的に更新してください。
+チーム全体で共有し、より良い開発環境を構築しましょう。

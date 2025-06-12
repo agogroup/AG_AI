@@ -1,0 +1,22 @@
+project:
+  name: "AG_AI"
+  created: "2025-06-12"
+  
+auto_settings:
+  file_operations:
+    auto_read: true
+    auto_write_patterns:
+      - "src/**/*"
+      - "tests/**/*"
+      - "*.md"
+  
+  commands:
+    auto_execute:
+      - "git status"
+      - "git diff"
+      - "npm test"
+      - "npm run build"
+    
+    require_confirmation:
+      - "git push"
+      - "rm -rf"

@@ -1,0 +1,125 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "プロジェクト環境のセットアップ",
+      "description": "開発環境の初期設定とディレクトリ構造の作成",
+      "status": "done",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Python 3.9+環境の構築、必要なライブラリのインストール（pandas, networkx, spacy, pyyaml, jinja2）、プロジェクトディレクトリ構造の作成（data/, scripts/, output/, config/）",
+      "testStrategy": "開発環境が正しくセットアップされ、すべての依存関係がインストールされていることを確認"
+    },
+    {
+      "id": 2,
+      "title": "データモデルクラスの実装",
+      "description": "Person、Activity、Workflowエンティティクラスの定義",
+      "status": "done",
+      "dependencies": [
+        1
+      ],
+      "priority": "high",
+      "details": "dataclassesまたはpydanticを使用してPerson、Activity、Workflowのデータモデルを実装。各エンティティの属性、バリデーション、シリアライゼーションメソッドを含む",
+      "testStrategy": "各データモデルクラスのインスタンス化、属性アクセス、シリアライゼーションのユニットテスト"
+    },
+    {
+      "id": 3,
+      "title": "DataLoaderクラスの実装",
+      "description": "生データ（メール、文書、ログ）の読み込みと前処理機能の実装",
+      "status": "pending",
+      "dependencies": [
+        2
+      ],
+      "priority": "high",
+      "details": "load_emails、load_documents、preprocessメソッドの実装。pandasを使用したデータの読み込み、クレンジング、正規化処理。複数のファイル形式（CSV、JSON、TXT）に対応",
+      "testStrategy": "サンプルデータでの読み込みテスト、データクレンジングの正確性確認、エラーハンドリングのテスト"
+    },
+    {
+      "id": 4,
+      "title": "PersonProfilerクラスの実装",
+      "description": "人物プロファイリング機能の開発",
+      "status": "pending",
+      "dependencies": [
+        3
+      ],
+      "priority": "medium",
+      "details": "extract_persons、analyze_activities、generate_markdownメソッドの実装。networkxを使用した協働ネットワーク分析、spaCyを使用した専門領域推定、活動パターンの時系列分析",
+      "testStrategy": "処理済みデータでのプロファイル生成テスト、ネットワーク分析の正確性確認、Markdown出力の検証"
+    },
+    {
+      "id": 5,
+      "title": "WorkflowAnalyzerクラスの実装",
+      "description": "業務フロー抽出と分析機能の開発",
+      "status": "pending",
+      "dependencies": [
+        3
+      ],
+      "priority": "medium",
+      "details": "detect_patterns、build_workflow、visualize_flowメソッドの実装。パターン認識アルゴリズム、依存関係グラフの構築、Mermaidダイアグラムの生成",
+      "testStrategy": "業務パターンの正確な検出、ワークフローの依存関係検証、Mermaidダイアグラムの文法チェック"
+    },
+    {
+      "id": 6,
+      "title": "部門間連携分析機能の実装",
+      "description": "部門間のコミュニケーションフローと情報伝達経路の分析",
+      "status": "pending",
+      "dependencies": [
+        4,
+        5
+      ],
+      "priority": "medium",
+      "details": "部門間のやり取り分析、情報フローの可視化、クロスファンクショナルな業務の特定。networkxを使用したグラフ分析とビジュアライゼーション",
+      "testStrategy": "複数部門のデータでの分析テスト、コミュニケーションフローの正確性確認"
+    },
+    {
+      "id": 7,
+      "title": "Obsidian出力生成機能の実装",
+      "description": "Obsidian用Markdownファイルの生成とリンク構造の構築",
+      "status": "pending",
+      "dependencies": [
+        4,
+        5,
+        6
+      ],
+      "priority": "medium",
+      "details": "Jinja2テンプレートを使用したMarkdown生成、双方向リンクの自動生成、タグシステムの実装、output/ディレクトリへの適切な出力",
+      "testStrategy": "生成されたMarkdownファイルのObsidianでの表示確認、リンクとタグの機能テスト"
+    },
+    {
+      "id": 8,
+      "title": "セキュリティとプライバシー機能の実装",
+      "description": "個人情報保護とアクセス制御の実装",
+      "status": "pending",
+      "dependencies": [
+        7
+      ],
+      "priority": "high",
+      "details": "個人情報のマスキング機能、アクセス権限管理、センシティブ情報の暗号化。設定ファイルでのマスキングルールの定義",
+      "testStrategy": "個人情報のマスキング確認、アクセス制御の動作テスト、暗号化・復号化のテスト"
+    },
+    {
+      "id": 9,
+      "title": "品質保証とテストフレームワークの構築",
+      "description": "データ検証とプロファイル精度評価の実装",
+      "status": "pending",
+      "dependencies": [
+        7
+      ],
+      "priority": "medium",
+      "details": "pytestを使用した単体テスト・統合テストの作成、データ検証スクリプト、プロファイル精度の評価メトリクス実装",
+      "testStrategy": "全モジュールのテストカバレッジ確認、エッジケースのテスト、パフォーマンステスト"
+    },
+    {
+      "id": 10,
+      "title": "インクリメンタル更新とプラグインアーキテクチャ",
+      "description": "差分更新機能と拡張可能なアーキテクチャの実装",
+      "status": "pending",
+      "dependencies": [
+        9
+      ],
+      "priority": "low",
+      "details": "既存データとの差分検出、インクリメンタルな更新処理、プラグイン機構の実装（新規データソース、アナライザーの追加が容易）",
+      "testStrategy": "差分更新の正確性テスト、プラグインの動的ロードテスト、後方互換性の確認"
+    }
+  ]
+}

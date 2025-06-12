@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: データモデルクラスの実装
+# Status: done
+# Dependencies: 1
+# Priority: high
+# Description: Person、Activity、Workflowエンティティクラスの定義
+# Details:
+dataclassesまたはpydanticを使用してPerson、Activity、Workflowのデータモデルを実装。各エンティティの属性、バリデーション、シリアライゼーションメソッドを含む
+
+# Test Strategy:
+各データモデルクラスのインスタンス化、属性アクセス、シリアライゼーションのユニットテスト

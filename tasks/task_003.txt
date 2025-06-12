@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: DataLoaderクラスの実装
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: 生データ（メール、文書、ログ）の読み込みと前処理機能の実装
+# Details:
+load_emails、load_documents、preprocessメソッドの実装。pandasを使用したデータの読み込み、クレンジング、正規化処理。複数のファイル形式（CSV、JSON、TXT）に対応
+
+# Test Strategy:
+サンプルデータでの読み込みテスト、データクレンジングの正確性確認、エラーハンドリングのテスト

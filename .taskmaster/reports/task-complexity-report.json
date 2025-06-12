@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "generatedAt": "2025-06-12T08:57:16.317Z",
+    "tasksAnalyzed": 10,
+    "totalTasks": 10,
+    "analysisCount": 10,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": false
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "プロジェクト環境のセットアップ",
+      "complexityScore": 3,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Expand on the steps to set up the project environment, including Python installation, library setup, and directory structure creation.",
+      "reasoning": "Relatively straightforward setup process, but requires attention to detail for proper configuration."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "データモデルクラスの実装",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Detail the implementation of Person, Activity, and Workflow entity classes, including attributes, validation, and serialization methods.",
+      "reasoning": "Moderate complexity due to multiple entity classes and required methods, but well-defined scope."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "DataLoaderクラスの実装",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the implementation of DataLoader class methods for loading and preprocessing various data types.",
+      "reasoning": "Higher complexity due to handling multiple file formats and preprocessing requirements."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "PersonProfilerクラスの実装",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Elaborate on the implementation of PersonProfiler class methods, including network analysis and NLP tasks.",
+      "reasoning": "High complexity due to advanced analysis techniques and integration of multiple libraries."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "WorkflowAnalyzerクラスの実装",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Detail the implementation of WorkflowAnalyzer class methods, focusing on pattern detection and workflow visualization.",
+      "reasoning": "High complexity due to algorithmic challenges in pattern recognition and graph construction."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "部門間連携分析機能の実装",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Expand on the implementation of inter-departmental collaboration analysis, including data processing and visualization.",
+      "reasoning": "Complex due to the need for advanced graph analysis and interpretation of cross-functional workflows."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Obsidian出力生成機能の実装",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Detail the steps for implementing Obsidian output generation, including Markdown creation and link structure.",
+      "reasoning": "Moderate complexity, requiring integration of multiple data sources and adherence to Obsidian's specific format."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "セキュリティとプライバシー機能の実装",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Elaborate on the implementation of security and privacy features, including data masking and access control.",
+      "reasoning": "High complexity due to the critical nature of security features and the need for robust implementation."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "品質保証とテストフレームワークの構築",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Detail the creation of a comprehensive test framework, including unit tests, integration tests, and performance evaluations.",
+      "reasoning": "Complex due to the need for extensive test coverage and implementation of various testing strategies."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "インクリメンタル更新とプラグインアーキテクチャ",
+      "complexityScore": 9,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the implementation of incremental update functionality and plugin architecture, focusing on extensibility.",
+      "reasoning": "Highest complexity due to the need for a flexible, maintainable architecture and handling of incremental data updates."
+    }
+  ]
+}
