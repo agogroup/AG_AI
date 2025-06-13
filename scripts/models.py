@@ -151,6 +151,44 @@ class WorkflowStep(BaseModel):
         }
 
 
+class Department(BaseModel):
+    """部門情報を表すモデル"""
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+    
+    id: str = Field(..., description="一意識別子")
+    name: str = Field(..., description="部門名")
+    manager: Optional[Person] = Field(None, description="部門長")
+    members: List[Person] = Field(default_factory=list, description="部門メンバー")
+    parent_department: Optional['Department'] = Field(None, description="親部門")
+    sub_departments: List['Department'] = Field(default_factory=list, description="子部門")
+    
+    def add_member(self, person: Person) -> None:
+        if person not in self.members:
+            self.members.append(person)
+    
+    def add_sub_department(self, department: 'Department') -> None:
+        if department not in self.sub_departments:
+            self.sub_departments.append(department)
+            department.parent_department = self
+    
+    def get_all_members(self) -> List[Person]:
+        """子部門を含む全メンバーを取得"""
+        members = self.members.copy()
+        for sub_dept in self.sub_departments:
+            members.extend(sub_dept.get_all_members())
+        return members
+    
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "id": self.id,
+            "name": self.name,
+            "manager_id": self.manager.id if self.manager else None,
+            "member_count": len(self.members),
+            "sub_department_count": len(self.sub_departments),
+            "parent_department_id": self.parent_department.id if self.parent_department else None
+        }
+
+
 class Workflow(BaseModel):
     model_config = ConfigDict(arbitrary_types_allowed=True)
     
@@ -203,4 +241,5 @@ class Workflow(BaseModel):
 Person.model_rebuild()
 Activity.model_rebuild()
 WorkflowStep.model_rebuild()
+Department.model_rebuild()
 Workflow.model_rebuild()

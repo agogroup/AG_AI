@@ -26,3 +26,8 @@ class WorkflowAnalysisError(ProfilingSystemError):
 class OutputGenerationError(ProfilingSystemError):
     """出力生成エラー"""
     pass
+
+
+class AnalysisError(ProfilingSystemError):
+    """分析エラー"""
+    pass
