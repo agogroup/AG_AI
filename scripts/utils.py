@@ -1,10 +1,12 @@
 import hashlib
 import re
+import unicodedata
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 from pathlib import Path
 import yaml
 import json
+import csv
 
 
 def generate_id(prefix: str, value: str) -> str:
@@ -196,3 +198,119 @@ def ensure_directory(path: Path) -> None:
         path: ディレクトリパス
     """
     path.mkdir(parents=True, exist_ok=True)
+
+
+def format_duration(hours: float) -> str:
+    """時間を人間が読みやすい形式にフォーマット
+    
+    Args:
+        hours: 時間（小数）
+        
+    Returns:
+        フォーマットされた文字列
+    """
+    if hours < 1:
+        minutes = int(hours * 60)
+        return f"{minutes}分"
+    elif hours == int(hours):
+        return f"{int(hours)}時間"
+    else:
+        h = int(hours)
+        m = int((hours - h) * 60)
+        return f"{h}時間{m}分"
+
+
+def load_json_file(filepath: Path) -> Dict[str, Any]:
+    """JSONファイルを読み込む
+    
+    Args:
+        filepath: JSONファイルのパス
+        
+    Returns:
+        読み込んだデータ
+        
+    Raises:
+        FileNotFoundError: ファイルが存在しない場合
+        json.JSONDecodeError: JSONのパースに失敗した場合
+    """
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def save_json_file(data: Dict[str, Any], filepath: Path) -> None:
+    """データをJSONファイルに保存
+    
+    Args:
+        data: 保存するデータ
+        filepath: 保存先のパス
+    """
+    ensure_directory(filepath.parent)
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2, default=str)
+
+
+def load_csv_file(filepath: Path) -> List[Dict[str, str]]:
+    """CSVファイルを読み込む
+    
+    Args:
+        filepath: CSVファイルのパス
+        
+    Returns:
+        読み込んだデータ（辞書のリスト）
+        
+    Raises:
+        FileNotFoundError: ファイルが存在しない場合
+    """
+    with open(filepath, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        return list(reader)
+
+
+def save_csv_file(data: List[Dict[str, Any]], filepath: Path, fieldnames: Optional[List[str]] = None) -> None:
+    """データをCSVファイルに保存
+    
+    Args:
+        data: 保存するデータ（辞書のリスト）
+        filepath: 保存先のパス
+        fieldnames: カラム名のリスト（省略時は最初のデータから取得）
+    """
+    if not data:
+        return
+    
+    ensure_directory(filepath.parent)
+    
+    if fieldnames is None:
+        fieldnames = list(data[0].keys())
+    
+    with open(filepath, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(data)
+
+
+def extract_email_domain(email: str) -> str:
+    """メールアドレスからドメインを抽出
+    
+    Args:
+        email: メールアドレス
+        
+    Returns:
+        ドメイン名
+    """
+    if '@' in email:
+        return email.split('@')[1].lower()
+    return ''
+
+
+def is_valid_email(email: str) -> bool:
+    """メールアドレスの簡易バリデーション
+    
+    Args:
+        email: チェックするメールアドレス
+        
+    Returns:
+        有効な形式かどうか
+    """
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, email))
