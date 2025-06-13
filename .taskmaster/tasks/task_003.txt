@@ -1,6 +1,6 @@
 # Task ID: 3
 # Title: DataLoaderクラスの実装
-# Status: pending
+# Status: done
 # Dependencies: 2
 # Priority: high
 # Description: 生データ（メール、文書、ログ）の読み込みと前処理機能の実装

@@ -1,0 +1,6 @@
+from,to,cc,subject,content,timestamp
+yamada.taro@ago-group.com,"tanaka.hanako@ago-group.com;suzuki.ichiro@ago-group.com",sato.jiro@ago-group.com,月次報告書の件,先月の売上報告書を添付いたします。ご確認をお願いします。,2024-01-15 09:00:00
+tanaka.hanako@ago-group.com,yamada.taro@ago-group.com,,Re: 月次報告書の件,確認しました。売上が前月比10%増加していますね。素晴らしい成果です。,2024-01-15 10:30:00
+suzuki.ichiro@ago-group.com,"yamada.taro@ago-group.com;tanaka.hanako@ago-group.com",,新規プロジェクトについて,新規プロジェクトの提案書を作成しました。明日の会議で詳細を説明します。【重要】,2024-01-16 14:00:00
+sato.jiro@ago-group.com,all@ago-group.com,,全社会議のお知らせ,来週月曜日の全社会議についてご連絡します。場所：大会議室 時間：15:00-17:00 #会議 #全社,2024-01-17 16:00:00
+yamada.taro@ago-group.com,external.client@example.com,tanaka.hanako@ago-group.com,お見積りの件,ご依頼いただいたお見積りを送付いたします。ご不明な点がございましたらお気軽にお問い合わせください。,2024-01-18 11:00:00

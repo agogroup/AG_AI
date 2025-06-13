@@ -26,7 +26,7 @@
       "id": 3,
       "title": "DataLoaderクラスの実装",
       "description": "生データ（メール、文書、ログ）の読み込みと前処理機能の実装",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         2
       ],
@@ -38,7 +38,7 @@
       "id": 4,
       "title": "PersonProfilerクラスの実装",
       "description": "人物プロファイリング機能の開発",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         3
       ],

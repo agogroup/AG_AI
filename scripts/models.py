@@ -30,6 +30,7 @@ class Person(BaseModel):
     activities: List['Activity'] = Field(default_factory=list, description="活動履歴")
     skills: List[str] = Field(default_factory=list, description="スキル・専門領域")
     collaborators: List['Person'] = Field(default_factory=list, description="協働者リスト")
+    metrics: Optional[Dict[str, Any]] = Field(None, description="ネットワーク分析メトリクス")
     
     @field_validator('email')
     @classmethod

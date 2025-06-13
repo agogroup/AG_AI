@@ -1,6 +1,6 @@
 # Task ID: 4
 # Title: PersonProfilerクラスの実装
-# Status: pending
+# Status: done
 # Dependencies: 3
 # Priority: medium
 # Description: 人物プロファイリング機能の開発
