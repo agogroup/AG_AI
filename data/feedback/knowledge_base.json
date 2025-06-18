@@ -1,0 +1,142 @@
+{
+  "entities": {
+    "菅野隆太": {
+      "correct_info": {
+        "name": "菅野隆太",
+        "role": "代表取締役社長",
+        "department": "AGOグループ"
+      },
+      "common_mistakes": [
+        {
+          "name": "菅野龍太",
+          "role": "プロジェクトマネージャー"
+        }
+      ],
+      "last_updated": "2025-06-13T15:50:51.971883"
+    },
+    "四ノ宮まゆ": {
+      "correct_info": {
+        "name": "四ノ宮まゆ",
+        "role": "製作担当",
+        "department": "AGOグループ",
+        "activities": [
+          "見積書作成",
+          "製作手配",
+          "納期管理",
+          "請求書発行"
+        ]
+      },
+      "common_mistakes": [
+        {
+          "name": "まゆ",
+          "note": "フルネームが四ノ宮まゆ"
+        }
+      ],
+      "last_updated": "2025-01-13T10:45:00"
+    },
+    "末武": {
+      "correct_info": {
+        "name": "末武",
+        "role": "フリーランス（仲介者）",
+        "department": "独立事業者",
+        "activities": [
+          "クライアント対応",
+          "要件ヒアリング",
+          "AGOへの発注"
+        ],
+        "note": "AGOの社員ではない"
+      },
+      "common_mistakes": [
+        {
+          "role": "営業担当",
+          "department": "AGOグループ",
+          "note": "AGOの社員と誤認されやすい"
+        }
+      ],
+      "last_updated": "2025-01-13T10:45:00"
+    },
+    "岡﨑康子": {
+      "correct_info": {
+        "name": "岡﨑康子",
+        "role": "代表",
+        "department": "Bitoiro（美十色）",
+        "activities": [
+          "発注",
+          "要件定義"
+        ]
+      },
+      "common_mistakes": [
+        {
+          "role": "担当者",
+          "note": "代表であることを見落としがち"
+        }
+      ],
+      "last_updated": "2025-01-13T10:45:00"
+    }
+  },
+  "relationships": {
+    "AGOグループ": {
+      "business_type": "看板・内装・デジタルサイネージ施工会社",
+      "key_relationships": {
+        "フリーランス仲介": [
+          "末武"
+        ],
+        "主要クライアント": [
+          "Bitoiro（美十色）"
+        ]
+      }
+    }
+  },
+  "workflows": {
+    "看板製作受注フロー": {
+      "correct_flow": {
+        "name": "看板製作受注フロー",
+        "steps": [
+          "クライアントがフリーランスに相談",
+          "フリーランスがAGOに製作依頼",
+          "要件確認・仕様決定",
+          "見積書作成",
+          "クライアント承認",
+          "製作手配",
+          "納期調整",
+          "納品・請求"
+        ],
+        "key_points": [
+          "フリーランスが仲介役として機能",
+          "AGOは直接製造ではなく施工管理"
+        ]
+      },
+      "variations": [],
+      "last_updated": "2025-01-13T10:45:00"
+    }
+  },
+  "corrections": [
+    {
+      "timestamp": "2025-01-13T10:45:00",
+      "type": "entity",
+      "original": {
+        "name": "菅野龍太",
+        "role": "プロジェクトマネージャー"
+      },
+      "corrected": {
+        "name": "菅野隆太",
+        "role": "代表取締役社長"
+      },
+      "context": "初回分析での役職修正"
+    },
+    {
+      "timestamp": "2025-06-13T15:50:51.971877",
+      "type": "entity",
+      "original": {
+        "name": "菅野龍太",
+        "role": "プロジェクトマネージャー"
+      },
+      "corrected": {
+        "name": "菅野隆太",
+        "role": "代表取締役社長",
+        "department": "AGOグループ"
+      },
+      "context": "ユーザーフィードバック"
+    }
+  ]
+}

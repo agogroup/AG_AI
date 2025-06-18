@@ -1,0 +1,44 @@
+#!/bin/bash
+# Git pre-commit hook - 日付のハードコーディングをチェック
+
+echo "🔍 日付のハードコーディングをチェック中..."
+
+# ステージされたPythonファイルを取得
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(py|json)$')
+
+if [ -z "$STAGED_FILES" ]; then
+    exit 0
+fi
+
+# 各ファイルをチェック
+HAS_ERROR=0
+for FILE in $STAGED_FILES; do
+    if [ -f "$FILE" ]; then
+        # 一時ファイルにステージされた内容を出力
+        git show ":$FILE" > /tmp/check_dates_temp
+        
+        # チェック実行
+        if ! python3 scripts/check_dates.py /tmp/check_dates_temp > /dev/null 2>&1; then
+            echo "❌ $FILE にハードコーディングされた日付があります"
+            python3 scripts/check_dates.py "$FILE" 2>/dev/null | grep "行"
+            HAS_ERROR=1
+        fi
+        
+        rm -f /tmp/check_dates_temp
+    fi
+done
+
+if [ $HAS_ERROR -eq 1 ]; then
+    echo ""
+    echo "⚠️  コミットを中止しました"
+    echo "💡 ヒント: scripts/date_utils.py の関数を使用してください"
+    echo ""
+    echo "例:"
+    echo "  from scripts.date_utils import get_today, get_now"
+    echo "  date = get_today()  # 2025-06-13"
+    echo ""
+    exit 1
+fi
+
+echo "✅ 日付チェック完了"
+exit 0

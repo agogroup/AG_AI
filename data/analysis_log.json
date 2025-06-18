@@ -1,0 +1,969 @@
+{
+  "processed_files": [
+    {
+      "filename": "[LINE]【現調資料まとめ】【AGO】.txt",
+      "original_path": "data/raw/[LINE]【現調資料まとめ】【AGO】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【現調資料まとめ】【AGO】.txt",
+      "analysis_results": null,
+      "file_hash": "d7ffb9cd54087783dcb1dd280595994b",
+      "file_size": 70481,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【航空券・ホテル】.txt",
+      "original_path": "data/raw/[LINE]【航空券・ホテル】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【航空券・ホテル】.txt",
+      "analysis_results": null,
+      "file_hash": "256346ee38d7b2e828683f453eca9833",
+      "file_size": 781,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【新宿アツミビル6F  蒼煙】.txt",
+      "original_path": "data/raw/[LINE]【新宿アツミビル6F  蒼煙】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【新宿アツミビル6F  蒼煙】.txt",
+      "analysis_results": null,
+      "file_hash": "a0d4e9b3c7887240fa2a0abd5c358fdd",
+      "file_size": 1251,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【杉戸工芸】サイン工事【AGO】.txt",
+      "original_path": "data/raw/[LINE]【杉戸工芸】サイン工事【AGO】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【杉戸工芸】サイン工事【AGO】.txt",
+      "analysis_results": null,
+      "file_hash": "595dfd450b83e96eaf846e5e626f0084",
+      "file_size": 9716,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGOグループ】税務等.txt",
+      "original_path": "data/raw/[LINE]【AGOグループ】税務等.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGOグループ】税務等.txt",
+      "analysis_results": null,
+      "file_hash": "4026c0126a3ce32cc748839bce7bdb66",
+      "file_size": 5291,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA福岡・佐賀】ムービング.txt",
+      "original_path": "data/raw/[LINE]【ACQUA福岡・佐賀】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA福岡・佐賀】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "737a0611e38588f6da3b46d8c05e71ab",
+      "file_size": 3662,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【新宿　蒼煙様】.txt",
+      "original_path": "data/raw/[LINE]【新宿　蒼煙様】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【新宿　蒼煙様】.txt",
+      "analysis_results": null,
+      "file_hash": "d7bc07adb9e4373fe7283833a1fc5f69",
+      "file_size": 12247,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【idealhome】✖︎【AGO】.txt",
+      "original_path": "data/raw/[LINE]【idealhome】✖︎【AGO】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【idealhome】✖︎【AGO】.txt",
+      "analysis_results": null,
+      "file_hash": "e9f9926d0d61d48afc2ed09b6d90dbfb",
+      "file_size": 5818,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]jiil新店の内装.txt",
+      "original_path": "data/raw/[LINE]jiil新店の内装.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]jiil新店の内装.txt",
+      "analysis_results": null,
+      "file_hash": "fc978b87da87edde376086428adb9ee2",
+      "file_size": 2427,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【鈴木　涼　設備　AGO】.txt",
+      "original_path": "data/raw/[LINE]【鈴木　涼　設備　AGO】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【鈴木　涼　設備　AGO】.txt",
+      "analysis_results": null,
+      "file_hash": "4cd153aa92f52940ace4712acf4a5c5a",
+      "file_size": 2309,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]市川　わくわく広場.txt",
+      "original_path": "data/raw/[LINE]市川　わくわく広場.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]市川　わくわく広場.txt",
+      "analysis_results": null,
+      "file_hash": "5e284752bf7319665f64bce347ebfef6",
+      "file_size": 4673,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【三十　AGO経理】.txt",
+      "original_path": "data/raw/[LINE]【三十　AGO経理】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【三十　AGO経理】.txt",
+      "analysis_results": null,
+      "file_hash": "553401049b2c48d74c61bea4c7c1d92e",
+      "file_size": 598,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]歌舞伎町　三経42 メンズコンカフェ内装.txt",
+      "original_path": "data/raw/[LINE]歌舞伎町　三経42 メンズコンカフェ内装.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]歌舞伎町　三経42 メンズコンカフェ内装.txt",
+      "analysis_results": null,
+      "file_hash": "e5121c3c87d7a570671c385fb5839ab1",
+      "file_size": 2142,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【業務連絡用】AGO×三十.txt",
+      "original_path": "data/raw/[LINE]【業務連絡用】AGO×三十.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【業務連絡用】AGO×三十.txt",
+      "analysis_results": null,
+      "file_hash": "02edc19a86a35e7c7a485a941ee1a9de",
+      "file_size": 6296,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]［パーソナルジム］BLESS様.txt",
+      "original_path": "data/raw/[LINE]［パーソナルジム］BLESS様.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]［パーソナルジム］BLESS様.txt",
+      "analysis_results": null,
+      "file_hash": "436f3ba2f3d865932e8156a29e4532cb",
+      "file_size": 775,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA RED水戸様】ムービング.txt",
+      "original_path": "data/raw/[LINE]【ACQUA RED水戸様】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA RED水戸様】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "dd25de7f84aae4a20675d8873900ae49",
+      "file_size": 4695,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【アットパレット様】【AGOグループ】.txt",
+      "original_path": "data/raw/[LINE]【アットパレット様】【AGOグループ】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【アットパレット様】【AGOグループ】.txt",
+      "analysis_results": null,
+      "file_hash": "d3fa56563a64545ecd5f1b0c7a8a2467",
+      "file_size": 1131,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【アドセック様】【AGO】.txt",
+      "original_path": "data/raw/[LINE]【アドセック様】【AGO】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【アドセック様】【AGO】.txt",
+      "analysis_results": null,
+      "file_hash": "8fd925f1a62c3e6f3dde1c89657fcf9f",
+      "file_size": 35743,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】施工日程.txt",
+      "original_path": "data/raw/[LINE]【AGO】施工日程.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】施工日程.txt",
+      "analysis_results": null,
+      "file_hash": "3675f1f0b4758d9a1731a56864ed2c73",
+      "file_size": 97838,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【看板デザイン入稿】BUZZ×AGO.txt",
+      "original_path": "data/raw/[LINE]【看板デザイン入稿】BUZZ×AGO.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【看板デザイン入稿】BUZZ×AGO.txt",
+      "analysis_results": null,
+      "file_hash": "eb071d3be8dade684b4016203a9b9111",
+      "file_size": 6544,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】業務連絡【看板内装】.txt",
+      "original_path": "data/raw/[LINE]【AGO】業務連絡【看板内装】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】業務連絡【看板内装】.txt",
+      "analysis_results": null,
+      "file_hash": "40c93644840fb4c721b07fb9b5f9da3f",
+      "file_size": 260669,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]東武公　肉笑にっこり様.txt",
+      "original_path": "data/raw/[LINE]東武公　肉笑にっこり様.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]東武公　肉笑にっこり様.txt",
+      "analysis_results": null,
+      "file_hash": "f11fcdf33d03070f9b42e82f70d21c3a",
+      "file_size": 7292,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】請求・入出金管理【広告代理店】.txt",
+      "original_path": "data/raw/[LINE]【AGO】請求・入出金管理【広告代理店】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】請求・入出金管理【広告代理店】.txt",
+      "analysis_results": null,
+      "file_hash": "d01119736894eee780ce37114fe72044",
+      "file_size": 3264,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【RUBY・Crystal様　ムーヴィング】.txt",
+      "original_path": "data/raw/[LINE]【RUBY・Crystal様　ムーヴィング】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【RUBY・Crystal様　ムーヴィング】.txt",
+      "analysis_results": null,
+      "file_hash": "4a0dd078e59e48afbc38df6868b5354b",
+      "file_size": 1958,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【札幌ACQUA様ムービング】.txt",
+      "original_path": "data/raw/[LINE]【札幌ACQUA様ムービング】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【札幌ACQUA様ムービング】.txt",
+      "analysis_results": null,
+      "file_hash": "6939c17ebaf43a83e048ea35811c3c53",
+      "file_size": 9094,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]［SKコーム様］.txt",
+      "original_path": "data/raw/[LINE]［SKコーム様］.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]［SKコーム様］.txt",
+      "analysis_results": "/Users/ago/AG_AI/output/intelligent_analysis/[LINE]［SKコーム様］_analysis.json",
+      "file_hash": "36516d10f435eae936ff0d62195087b3",
+      "file_size": 9271,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【Charman様　ムービング】.txt",
+      "original_path": "data/raw/[LINE]【Charman様　ムービング】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【Charman様　ムービング】.txt",
+      "analysis_results": null,
+      "file_hash": "ce337bd197760b433600f5664f22f5c3",
+      "file_size": 1223,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]moffu （ago.adsec）.txt",
+      "original_path": "data/raw/[LINE]moffu （ago.adsec）.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]moffu （ago.adsec）.txt",
+      "analysis_results": null,
+      "file_hash": "c674d555d2909d4bad855e36e010c20f",
+      "file_size": 2659,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]ら.txt",
+      "original_path": "data/raw/[LINE]ら.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]ら.txt",
+      "analysis_results": null,
+      "file_hash": "020e0c22a65bbd8021dd656644308ee3",
+      "file_size": 3735,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【三十　AGO】.txt",
+      "original_path": "data/raw/[LINE]【三十　AGO】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【三十　AGO】.txt",
+      "analysis_results": null,
+      "file_hash": "139e4732fa464fe909113592b57bdeff",
+      "file_size": 17312,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【シャンポール千葉】.txt",
+      "original_path": "data/raw/[LINE]【シャンポール千葉】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【シャンポール千葉】.txt",
+      "analysis_results": null,
+      "file_hash": "81e753901ad943ca8e568cbc21e13eef",
+      "file_size": 994,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]ヤマダ家具工芸 様 ✖︎ AGOグループ.txt",
+      "original_path": "data/raw/[LINE]ヤマダ家具工芸 様 ✖︎ AGOグループ.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]ヤマダ家具工芸 様 ✖︎ AGOグループ.txt",
+      "analysis_results": null,
+      "file_hash": "e5f14aef091ab0f32c5643056716ad12",
+      "file_size": 16126,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【横浜ANCムービングサイネージリース】.txt",
+      "original_path": "data/raw/[LINE]【横浜ANCムービングサイネージリース】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【横浜ANCムービングサイネージリース】.txt",
+      "analysis_results": null,
+      "file_hash": "def10b4e0d548ecd0e6732c322f824e0",
+      "file_size": 555,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【札幌NO.9様】ムーヴィング.txt",
+      "original_path": "data/raw/[LINE]【札幌NO.9様】ムーヴィング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【札幌NO.9様】ムーヴィング.txt",
+      "analysis_results": null,
+      "file_hash": "41997e9b71b952bf09258c7d507c0bc0",
+      "file_size": 1076,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO 総務】.txt",
+      "original_path": "data/raw/[LINE]【AGO 総務】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO 総務】.txt",
+      "analysis_results": null,
+      "file_hash": "1bb68f925736a38942f40c9d99ef525e",
+      "file_size": 61591,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA名古屋ムービング】.txt",
+      "original_path": "data/raw/[LINE]【ACQUA名古屋ムービング】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA名古屋ムービング】.txt",
+      "analysis_results": null,
+      "file_hash": "c82dc6d9f56b77d5ef7a079f17d0553b",
+      "file_size": 2766,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【輸入、発注】.txt",
+      "original_path": "data/raw/[LINE]【輸入、発注】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【輸入、発注】.txt",
+      "analysis_results": null,
+      "file_hash": "41f7fdff2d3a19035e88a5b2113d4660",
+      "file_size": 42956,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【戸田　セントラルキッチン】.txt",
+      "original_path": "data/raw/[LINE]【戸田　セントラルキッチン】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【戸田　セントラルキッチン】.txt",
+      "analysis_results": null,
+      "file_hash": "1141dc50c9a0b4d54173322e3bb97ade",
+      "file_size": 1402,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【アツミビル　6階】.txt",
+      "original_path": "data/raw/[LINE]【アツミビル　6階】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【アツミビル　6階】.txt",
+      "analysis_results": null,
+      "file_hash": "8f92ebc5e6df44b7cb6fef4d2ad4938b",
+      "file_size": 777,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】施工後写真アルバム.txt",
+      "original_path": "data/raw/[LINE]【AGO】施工後写真アルバム.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】施工後写真アルバム.txt",
+      "analysis_results": null,
+      "file_hash": "213760b953d667a907e7e39332378de7",
+      "file_size": 38640,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【仮設サイネージ】.txt",
+      "original_path": "data/raw/[LINE]【仮設サイネージ】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【仮設サイネージ】.txt",
+      "analysis_results": null,
+      "file_hash": "5b68c84c196dcb7d7c6dc0f49c70487a",
+      "file_size": 3344,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【千葉ACQUA様】ムービングリース.txt",
+      "original_path": "data/raw/[LINE]【千葉ACQUA様】ムービングリース.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【千葉ACQUA様】ムービングリース.txt",
+      "analysis_results": null,
+      "file_hash": "19ab592d32a83484ad00362ef67b3f06",
+      "file_size": 408,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]BUZZ LIVE.txt",
+      "original_path": "data/raw/[LINE]BUZZ LIVE.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]BUZZ LIVE.txt",
+      "analysis_results": null,
+      "file_hash": "29c051d3edad20987e80f8fb9d90b590",
+      "file_size": 5249,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA京都】ムービング.txt",
+      "original_path": "data/raw/[LINE]【ACQUA京都】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA京都】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "022b9746f985a32c3b92b783d20705ee",
+      "file_size": 1150,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】経理・請求確認【看板・内装】.txt",
+      "original_path": "data/raw/[LINE]【AGO】経理・請求確認【看板・内装】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】経理・請求確認【看板・内装】.txt",
+      "analysis_results": null,
+      "file_hash": "ef9563fa1446285c0d65c3a0ce9a5bfe",
+      "file_size": 32809,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AXEL千葉様】ムービング.txt",
+      "original_path": "data/raw/[LINE]【AXEL千葉様】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AXEL千葉様】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "6ce887d00ed529f21bb6d66a781a1bb0",
+      "file_size": 1800,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】施工完了報告.txt",
+      "original_path": "data/raw/[LINE]【AGO】施工完了報告.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】施工完了報告.txt",
+      "analysis_results": null,
+      "file_hash": "6a459f7ea1cfc41396d1e0e18da811ff",
+      "file_size": 17154,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA浜松】ムービング.txt",
+      "original_path": "data/raw/[LINE]【ACQUA浜松】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA浜松】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "af2de23cea155d5deaae2980b732ff98",
+      "file_size": 974,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ムサシ建装様】.txt",
+      "original_path": "data/raw/[LINE]【ムサシ建装様】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ムサシ建装様】.txt",
+      "analysis_results": null,
+      "file_hash": "1ff8120e89be4ebb102f43328c3ed6d4",
+      "file_size": 2157,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【杉戸工芸】発注【AGO】.txt",
+      "original_path": "data/raw/[LINE]【杉戸工芸】発注【AGO】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【杉戸工芸】発注【AGO】.txt",
+      "analysis_results": null,
+      "file_hash": "5507a5f02b80e2392b1a17110bc4d0ad",
+      "file_size": 10707,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【新潟AZUL様】ムービング.txt",
+      "original_path": "data/raw/[LINE]【新潟AZUL様】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【新潟AZUL様】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "1f1ca523d8ee184407a43677ba7f5da0",
+      "file_size": 1186,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]内装変更申請.txt",
+      "original_path": "data/raw/[LINE]内装変更申請.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]内装変更申請.txt",
+      "analysis_results": null,
+      "file_hash": "62ab92967cb41d1678ea8b847d7915ce",
+      "file_size": 9004,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【エアコン屋さん】　AGO.txt",
+      "original_path": "data/raw/[LINE]【エアコン屋さん】　AGO.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【エアコン屋さん】　AGO.txt",
+      "analysis_results": null,
+      "file_hash": "8c888e7f1383c845b41054a8c3480d65",
+      "file_size": 4340,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【Bar拳で　金沢】ムービング.txt",
+      "original_path": "data/raw/[LINE]【Bar拳で　金沢】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【Bar拳で　金沢】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "348342f8cbf59502d40c027c225a5b37",
+      "file_size": 755,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]tamu, まゆ, 【AGO】🚀Ryuta kanno🌖菅野.txt",
+      "original_path": "data/raw/[LINE]tamu, まゆ, 【AGO】🚀Ryuta kanno🌖菅野.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]tamu, まゆ, 【AGO】🚀Ryuta kanno🌖菅野.txt",
+      "analysis_results": null,
+      "file_hash": "498d7553184af04ea2bb3e5a4d0eb9c5",
+      "file_size": 2360,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]AGOグループ×FDC.txt",
+      "original_path": "data/raw/[LINE]AGOグループ×FDC.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]AGOグループ×FDC.txt",
+      "analysis_results": null,
+      "file_hash": "4d4f54d245c5925a6cc6ca09ef086d38",
+      "file_size": 6275,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【新宿alphaムービングリース】.txt",
+      "original_path": "data/raw/[LINE]【新宿alphaムービングリース】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【新宿alphaムービングリース】.txt",
+      "analysis_results": null,
+      "file_hash": "46f928b151601b2a4ec5c7a69304b246",
+      "file_size": 826,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【熊本ACQUA.luxury様　ムービング】.txt",
+      "original_path": "data/raw/[LINE]【熊本ACQUA.luxury様　ムービング】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【熊本ACQUA.luxury様　ムービング】.txt",
+      "analysis_results": null,
+      "file_hash": "736a99d32713d304b5c15c11d27a402e",
+      "file_size": 959,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ソフィア3サイン工事の件】.txt",
+      "original_path": "data/raw/[LINE]【ソフィア3サイン工事の件】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ソフィア3サイン工事の件】.txt",
+      "analysis_results": null,
+      "file_hash": "42059c22d92dd51248d6690561d5e979",
+      "file_size": 910,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ラクリマ様】業務ライン【看板】現調.txt",
+      "original_path": "data/raw/[LINE]【ラクリマ様】業務ライン【看板】現調.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ラクリマ様】業務ライン【看板】現調.txt",
+      "analysis_results": null,
+      "file_hash": "fd805fb9d7f7d180569cfd112e04e9ee",
+      "file_size": 57954,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]めんへら♡なの？内装.txt",
+      "original_path": "data/raw/[LINE]めんへら♡なの？内装.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]めんへら♡なの？内装.txt",
+      "analysis_results": null,
+      "file_hash": "e410982b8c7b7eb6e40c186070912604",
+      "file_size": 308,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【六本木candyGIM様】.txt",
+      "original_path": "data/raw/[LINE]【六本木candyGIM様】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【六本木candyGIM様】.txt",
+      "analysis_results": null,
+      "file_hash": "a56a22b15e02b590b3c0b7d1b8d2b973",
+      "file_size": 116,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【大宮DOAムービングリース】.txt",
+      "original_path": "data/raw/[LINE]【大宮DOAムービングリース】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【大宮DOAムービングリース】.txt",
+      "analysis_results": null,
+      "file_hash": "ffbf930b689b76ee1ea5e488207eb2e6",
+      "file_size": 758,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]赤坂ピーチ様.txt",
+      "original_path": "data/raw/[LINE]赤坂ピーチ様.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]赤坂ピーチ様.txt",
+      "analysis_results": null,
+      "file_hash": "b5089200eed6f3c41d46ae5b128f5d39",
+      "file_size": 12068,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【業務連絡】AGO 渡邊電気.txt",
+      "original_path": "data/raw/[LINE]【業務連絡】AGO 渡邊電気.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【業務連絡】AGO 渡邊電気.txt",
+      "analysis_results": null,
+      "file_hash": "04e099e0ce481980abc99ef27b1c469d",
+      "file_size": 7735,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]名古屋リニューアル.txt",
+      "original_path": "data/raw/[LINE]名古屋リニューアル.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]名古屋リニューアル.txt",
+      "analysis_results": null,
+      "file_hash": "41e6c511f8ad421ace74b32d04b5db89",
+      "file_size": 222,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA本店様】.txt",
+      "original_path": "data/raw/[LINE]【ACQUA本店様】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA本店様】.txt",
+      "analysis_results": null,
+      "file_hash": "be2e6ad7eb7d09a7506b54f99059bc9f",
+      "file_size": 1888,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【内装デザイン】2nd Village様.txt",
+      "original_path": "data/raw/[LINE]【内装デザイン】2nd Village様.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【内装デザイン】2nd Village様.txt",
+      "analysis_results": null,
+      "file_hash": "1f849384174098d1f23f3fb238e6b05a",
+      "file_size": 2959,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]AZUR×ACQUA ムービング.txt",
+      "original_path": "data/raw/[LINE]AZUR×ACQUA ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]AZUR×ACQUA ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "5797286dcbf232218e5da713f84bfced",
+      "file_size": 846,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【小倉 ACQUA GOLD様】ムービング.txt",
+      "original_path": "data/raw/[LINE]【小倉 ACQUA GOLD様】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【小倉 ACQUA GOLD様】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "d6b4e35681751c57de4e495ce1b8c39e",
+      "file_size": 419,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]b&AGO.txt",
+      "original_path": "data/raw/[LINE]b&AGO.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]b&AGO.txt",
+      "analysis_results": null,
+      "file_hash": "b36da60e4383597652df178cf5c8f6de",
+      "file_size": 814,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【アクア佐賀施工】.txt",
+      "original_path": "data/raw/[LINE]【アクア佐賀施工】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【アクア佐賀施工】.txt",
+      "analysis_results": null,
+      "file_hash": "38993a80b4ef10a807cf14a7bcc8349f",
+      "file_size": 9519,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]BAR KOENJI.txt",
+      "original_path": "data/raw/[LINE]BAR KOENJI.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]BAR KOENJI.txt",
+      "analysis_results": null,
+      "file_hash": "51ed3930e0d2a5af49ea933c9a82d328",
+      "file_size": 2026,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【新宿AURA様】ムービング.txt",
+      "original_path": "data/raw/[LINE]【新宿AURA様】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【新宿AURA様】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "3a8748c411ab7ab02679cc73c424ebeb",
+      "file_size": 4031,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】入稿デザイン確認及び施主デザイン確定.txt",
+      "original_path": "data/raw/[LINE]【AGO】入稿デザイン確認及び施主デザイン確定.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】入稿デザイン確認及び施主デザイン確定.txt",
+      "analysis_results": null,
+      "file_hash": "4d8ecd1dedd0450e39739b354fc0016b",
+      "file_size": 8247,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA鹿児島様】ムービングリース.txt",
+      "original_path": "data/raw/[LINE]【ACQUA鹿児島様】ムービングリース.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA鹿児島様】ムービングリース.txt",
+      "analysis_results": null,
+      "file_hash": "3e0d4833e78d6188f27239cf39530053",
+      "file_size": 950,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]hAPPY様ムービングリース.txt",
+      "original_path": "data/raw/[LINE]hAPPY様ムービングリース.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]hAPPY様ムービングリース.txt",
+      "analysis_results": null,
+      "file_hash": "89ae20d645e9f75baf1938c4657215f6",
+      "file_size": 760,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO事務】.txt",
+      "original_path": "data/raw/[LINE]【AGO事務】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO事務】.txt",
+      "analysis_results": null,
+      "file_hash": "c5685ec85f2da61027196b645f251f19",
+      "file_size": 17648,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【ACQUA静岡ムービング】.txt",
+      "original_path": "data/raw/[LINE]【ACQUA静岡ムービング】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【ACQUA静岡ムービング】.txt",
+      "analysis_results": null,
+      "file_hash": "fc84909937e08979c9401909f202270b",
+      "file_size": 1610,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【足立さん】サイネージリース.txt",
+      "original_path": "data/raw/[LINE]【足立さん】サイネージリース.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【足立さん】サイネージリース.txt",
+      "analysis_results": null,
+      "file_hash": "600af9aec5c27417dffc81dd6ba9d0fe",
+      "file_size": 3222,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【トシン電気】【AGOグループ】.txt",
+      "original_path": "data/raw/[LINE]【トシン電気】【AGOグループ】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【トシン電気】【AGOグループ】.txt",
+      "analysis_results": null,
+      "file_hash": "362b738764304a0958489eaf554cafef",
+      "file_size": 28318,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]ACQUA川崎　ムービングリース.txt",
+      "original_path": "data/raw/[LINE]ACQUA川崎　ムービングリース.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]ACQUA川崎　ムービングリース.txt",
+      "analysis_results": null,
+      "file_hash": "040c39a70caa55d0fe63c1d2885fc75c",
+      "file_size": 632,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【事務タスク管理】【見積請求ログ】.txt",
+      "original_path": "data/raw/[LINE]【事務タスク管理】【見積請求ログ】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【事務タスク管理】【見積請求ログ】.txt",
+      "analysis_results": null,
+      "file_hash": "7606d3e1e1436dd0c107c92ba9bdee16",
+      "file_size": 4098,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]BUZZ GROUP 施工日程・AGO地方日程.txt",
+      "original_path": "data/raw/[LINE]BUZZ GROUP 施工日程・AGO地方日程.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]BUZZ GROUP 施工日程・AGO地方日程.txt",
+      "analysis_results": null,
+      "file_hash": "652c5dd442106e05e875c607c331f0ca",
+      "file_size": 81558,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]movementPARK設営本部.txt",
+      "original_path": "data/raw/[LINE]movementPARK設営本部.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]movementPARK設営本部.txt",
+      "analysis_results": null,
+      "file_hash": "d49d8fbbdea6dab619f24d0261a56069",
+      "file_size": 5809,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【大宮alpha様ムービング】.txt",
+      "original_path": "data/raw/[LINE]【大宮alpha様ムービング】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【大宮alpha様ムービング】.txt",
+      "analysis_results": null,
+      "file_hash": "4b44e577fe3ee8943e6eb667aba7b542",
+      "file_size": 1394,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]買取大吉様　シートデザイン.txt",
+      "original_path": "data/raw/[LINE]買取大吉様　シートデザイン.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]買取大吉様　シートデザイン.txt",
+      "analysis_results": null,
+      "file_hash": "4c398ae007f30515eb80a6c303e24368",
+      "file_size": 11050,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]看板［ブレア様］.txt",
+      "original_path": "data/raw/[LINE]看板［ブレア様］.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]看板［ブレア様］.txt",
+      "analysis_results": null,
+      "file_hash": "b398333e7e648c4c2b8560b40e962189",
+      "file_size": 8141,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【winners広告　】.txt",
+      "original_path": "data/raw/[LINE]【winners広告　】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【winners広告　】.txt",
+      "analysis_results": null,
+      "file_hash": "0ce55cc7200fa82c4313b63a3b4fbfee",
+      "file_size": 351,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【AGO】施工後写真アルバム2.txt",
+      "original_path": "data/raw/[LINE]【AGO】施工後写真アルバム2.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【AGO】施工後写真アルバム2.txt",
+      "analysis_results": null,
+      "file_hash": "551ccadf4de2f83da6d03839caa98b9d",
+      "file_size": 95,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【新宿NO.9様】ムービング.txt",
+      "original_path": "data/raw/[LINE]【新宿NO.9様】ムービング.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【新宿NO.9様】ムービング.txt",
+      "analysis_results": null,
+      "file_hash": "80776e7906c1bfdac4085d5f3a8570a5",
+      "file_size": 1954,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【宇都宮案内板サイネージリース】.txt",
+      "original_path": "data/raw/[LINE]【宇都宮案内板サイネージリース】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【宇都宮案内板サイネージリース】.txt",
+      "analysis_results": null,
+      "file_hash": "0885bd93032480d52d787746064ba1cb",
+      "file_size": 1414,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【宇都宮　梨苑】.txt",
+      "original_path": "data/raw/[LINE]【宇都宮　梨苑】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【宇都宮　梨苑】.txt",
+      "analysis_results": null,
+      "file_hash": "63efb3e26477931063e2f1c703b6116c",
+      "file_size": 3458,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【宇都宮　鈴木さん】.txt",
+      "original_path": "data/raw/[LINE]【宇都宮　鈴木さん】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【宇都宮　鈴木さん】.txt",
+      "analysis_results": null,
+      "file_hash": "318203c016f14e606c6798e1619d9a08",
+      "file_size": 6285,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【アドセック様　見積経理等】.txt",
+      "original_path": "data/raw/[LINE]【アドセック様　見積経理等】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【アドセック様　見積経理等】.txt",
+      "analysis_results": null,
+      "file_hash": "ba15bee892c32093b9c637578cd70527",
+      "file_size": 1687,
+      "status": "migrated"
+    },
+    {
+      "filename": "[LINE]【横浜　AMURU［仮］】.txt",
+      "original_path": "data/raw/[LINE]【横浜　AMURU［仮］】.txt",
+      "processed_date": "2025-06-13T14:00:00",
+      "moved_to": "/Users/ago/AG_AI/data/01_analyzed/2025-06-13/[LINE]【横浜　AMURU［仮］】.txt",
+      "analysis_results": null,
+      "file_hash": "5a0d60cdfedfe7721226c2f82e6452aa",
+      "file_size": 5381,
+      "status": "migrated"
+    }
+  ],
+  "last_cleanup": "2025-06-13T20:43:26.810981",
+  "statistics": {
+    "total_processed": 96,
+    "total_archived": 0
+  }
+}
