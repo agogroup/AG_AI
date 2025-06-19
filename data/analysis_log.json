@@ -959,11 +959,61 @@
       "file_hash": "5a0d60cdfedfe7721226c2f82e6452aa",
       "file_size": 5381,
       "status": "migrated"
+    },
+    {
+      "filename": "6月19日.md",
+      "original_path": "data/00_new/6月19日.md",
+      "processed_date": "2025-06-19T13:02:23.549048",
+      "moved_to": "data/01_analyzed/2025-06-19/6月19日.md",
+      "analysis_results": "output/intelligent_analysis/6月19日_analysis.json",
+      "file_hash": "da691cb965abf15d683367f1f4a25c4b",
+      "file_size": 76259,
+      "status": "completed"
+    },
+    {
+      "filename": "sample_text.txt",
+      "original_path": "data/00_new/sample_text.txt",
+      "processed_date": "2025-06-19T13:02:23.551376",
+      "moved_to": "data/01_analyzed/2025-06-19/sample_text.txt",
+      "analysis_results": "output/intelligent_analysis/sample_text_analysis.json",
+      "file_hash": "c895cc91c4ba97bcd05871c807c41e55",
+      "file_size": 109,
+      "status": "completed"
+    },
+    {
+      "filename": "歩合計算の内訳.md",
+      "original_path": "data/00_new/歩合計算の内訳.md",
+      "processed_date": "2025-06-19T13:02:23.552941",
+      "moved_to": "data/01_analyzed/2025-06-19/歩合計算の内訳.md",
+      "analysis_results": "output/intelligent_analysis/歩合計算の内訳_analysis.json",
+      "file_hash": "706b2fb86b49de8e1f0aa7ba00eebd12",
+      "file_size": 2381,
+      "status": "completed"
+    },
+    {
+      "filename": "2025-06-04 13_29_14.mp3",
+      "original_path": "data/00_new/2025-06-04 13_29_14.mp3",
+      "processed_date": "2025-06-19T13:33:36.255139",
+      "moved_to": "data/01_analyzed/2025-06-19/2025-06-04 13_29_14.mp3",
+      "analysis_results": "data/01_analyzed/2025-06-19/2025-06-04 13_29_14_transcription.txt",
+      "file_hash": "c517ca52bd72d8b8864377d631a43f38",
+      "file_size": 12221361,
+      "status": "completed"
+    },
+    {
+      "filename": "test_document.txt",
+      "original_path": "data/00_new/test_document.txt",
+      "processed_date": "2025-06-19T13:54:19.120145",
+      "moved_to": "data/01_analyzed/2025-06-19/test_document.txt",
+      "analysis_results": "output/intelligent_analysis/test_document_analysis.json",
+      "file_hash": "1ca0ea38d5a15853b089f12c31b02c35",
+      "file_size": 212,
+      "status": "completed"
     }
   ],
   "last_cleanup": "2025-06-13T20:43:26.810981",
   "statistics": {
-    "total_processed": 96,
+    "total_processed": 101,
     "total_archived": 0
   }
 }

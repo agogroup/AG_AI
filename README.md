@@ -31,6 +31,7 @@ pip install -r requirements.txt
 超簡単！`data/00_new/`フォルダにファイルを入れるだけ。
 
 #### 対応データ形式
+- **音声**: .mp3, .wav, .m4a, .mp4, .aac, .flac（自動文字起こし）
 - **メール**: .pst, .msg, .mbox, .eml, .txt
 - **文書**: .docx, .doc, .pdf, .txt, .md, .xlsx, .xls, .pptx, .ppt  
 - **チャット**: LINE (.txt), Slack (.json), Teams/Zoom (.csv)
@@ -38,11 +39,12 @@ pip install -r requirements.txt
 #### 使い方
 ```bash
 # どんなファイルでもdata/00_new/に入れるだけ
+cp ~/Downloads/会議録音.mp3 data/00_new/
 cp ~/Downloads/[LINE]営業チーム.txt data/00_new/
 cp ~/Documents/メール履歴.mbox data/00_new/
 cp ~/Desktop/会議メモ.pdf data/00_new/
 
-# 複数ファイルを一括投入もOK
+# 音声もテキストも一括投入OK
 cp ~/Desktop/分析したいファイル/* data/00_new/
 ```
 
@@ -101,8 +103,15 @@ python analyze_advanced.py --demo
 3. `python analyze.py`を実行
 4. 画面の指示に従って分析（処理後は自動的に`data/01_analyzed/日付/`に移動）
 
-#### 例2: 複数ファイルの一括分析
-1. 全てのファイルを`data/00_new/`にそのまま配置
+#### 例2: 音声ファイルの分析（会議録音など）
+1. 音声ファイル（.mp3, .wav等）を`data/00_new/`に配置
+2. `python analyze.py`を実行
+3. 自動的に文字起こし（Whisper使用）
+4. 文字起こし結果をLLMが分析
+5. 会議内容の要約・参加者・決定事項を抽出
+
+#### 例3: 複数ファイルの一括分析
+1. 全てのファイルを`data/00_new/`にそのまま配置（音声もテキストも混在OK）
 2. `python analyze.py`を実行
 3. "all"を選択して全ファイル分析
 4. AIが文脈を理解して関係性を抽出

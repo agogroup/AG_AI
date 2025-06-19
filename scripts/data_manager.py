@@ -57,10 +57,49 @@ class DataManager:
                 hash_md5.update(chunk)
         return hash_md5.hexdigest()
     
+    def get_file_type(self, file_path: Path) -> str:
+        """ファイルタイプを判定"""
+        suffix = file_path.suffix.lower()
+        
+        # 音声ファイル
+        audio_extensions = {'.mp3', '.wav', '.m4a', '.mp4', '.aac', '.flac', '.wma', '.ogg'}
+        if suffix in audio_extensions:
+            return 'audio'
+            
+        # メールファイル
+        email_extensions = {'.pst', '.msg', '.mbox', '.eml'}
+        if suffix in email_extensions:
+            return 'email'
+            
+        # ドキュメントファイル
+        doc_extensions = {'.docx', '.doc', '.pdf', '.xlsx', '.xls', '.pptx', '.ppt'}
+        if suffix in doc_extensions:
+            return 'document'
+            
+        # テキストファイル
+        text_extensions = {'.txt', '.json', '.csv', '.log', '.md'}
+        if suffix in text_extensions:
+            return 'text'
+            
+        return 'unknown'
+    
+    def is_audio_file(self, file_path: Path) -> bool:
+        """音声ファイルかどうか判定"""
+        return self.get_file_type(file_path) == 'audio'
+    
     def get_new_files(self) -> List[Path]:
         """未処理ファイルのリストを取得"""
         files = []
-        for ext in ['*.txt', '*.json', '*.csv', '*.log']:
+        # テキストファイル拡張子
+        text_extensions = ['*.txt', '*.json', '*.csv', '*.log', '*.md', '*.docx', '*.doc', '*.pdf']
+        # 音声ファイル拡張子
+        audio_extensions = ['*.mp3', '*.wav', '*.m4a', '*.mp4', '*.aac', '*.flac', '*.wma', '*.ogg']
+        # メールファイル拡張子
+        email_extensions = ['*.pst', '*.msg', '*.mbox', '*.eml']
+        
+        all_extensions = text_extensions + audio_extensions + email_extensions
+        
+        for ext in all_extensions:
             files.extend(self.new_dir.glob(ext))
         return sorted(files)
     
@@ -205,6 +244,23 @@ class DataManager:
         
         if duplicates_found == 0:
             print("✅ 重複ファイルは見つかりませんでした")
+    
+    def get_new_files_by_type(self) -> dict:
+        """ファイルタイプ別に未処理ファイルを取得"""
+        all_files = self.get_new_files()
+        files_by_type = {
+            'audio': [],
+            'text': [],
+            'document': [],
+            'email': [],
+            'unknown': []
+        }
+        
+        for file_path in all_files:
+            file_type = self.get_file_type(file_path)
+            files_by_type[file_type].append(file_path)
+        
+        return files_by_type
 
 
 def main():
@@ -227,11 +283,41 @@ def main():
             dm.cleanup_duplicates()
         
         elif command == "list":
-            files = dm.get_new_files()
-            if files:
-                print(f"\n📁 未処理ファイル ({len(files)}個):")
-                for f in files:
-                    print(f"  - {f.name}")
+            files_by_type = dm.get_new_files_by_type()
+            total_files = sum(len(files) for files in files_by_type.values())
+            
+            if total_files > 0:
+                print(f"\n📁 未処理ファイル (合計{total_files}個):")
+                
+                # 音声ファイル
+                if files_by_type['audio']:
+                    print(f"\n🎵 音声ファイル ({len(files_by_type['audio'])}個):")
+                    for f in files_by_type['audio']:
+                        print(f"  - {f.name}")
+                
+                # テキストファイル
+                if files_by_type['text']:
+                    print(f"\n📄 テキストファイル ({len(files_by_type['text'])}個):")
+                    for f in files_by_type['text']:
+                        print(f"  - {f.name}")
+                
+                # ドキュメントファイル
+                if files_by_type['document']:
+                    print(f"\n📑 ドキュメント ({len(files_by_type['document'])}個):")
+                    for f in files_by_type['document']:
+                        print(f"  - {f.name}")
+                
+                # メールファイル
+                if files_by_type['email']:
+                    print(f"\n📧 メールファイル ({len(files_by_type['email'])}個):")
+                    for f in files_by_type['email']:
+                        print(f"  - {f.name}")
+                
+                # 不明なファイル
+                if files_by_type['unknown']:
+                    print(f"\n❓ その他 ({len(files_by_type['unknown'])}個):")
+                    for f in files_by_type['unknown']:
+                        print(f"  - {f.name}")
             else:
                 print("✅ 未処理ファイルはありません")
         

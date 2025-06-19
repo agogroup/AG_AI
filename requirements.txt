@@ -2,6 +2,12 @@
 
 # 基本的なパッケージ
 python-dateutil>=2.8   # 日時処理
+psutil>=5.8.0          # システム情報取得
+
+# 音声処理
+openai-whisper>=20231117  # 音声文字起こし（Whisper）
+torch                     # PyTorch（Whisper依存）
+torchaudio               # 音声処理（Whisper依存）
 
 # 将来的なLLM統合のための準備
 # openai>=1.0          # OpenAI API（必要時にコメントアウトを外す）

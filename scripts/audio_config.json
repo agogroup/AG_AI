@@ -1,0 +1,28 @@
+{
+  "whisper_settings": {
+    "default_model": "turbo",
+    "language": "ja",
+    "auto_model_selection": true,
+    "enable_gpu": true,
+    "beam_size": 2,
+    "temperature": 0.0,
+    "enable_mps": true
+  },
+  "processing_options": {
+    "max_file_size_mb": 500,
+    "chunk_duration_minutes": 10,
+    "enable_parallel_processing": true,
+    "max_parallel_jobs": 2
+  },
+  "output_settings": {
+    "save_original_audio": false,
+    "save_transcription_json": true,
+    "save_transcription_txt": true,
+    "include_timestamps": true
+  },
+  "quality_settings": {
+    "auto_quality_detection": true,
+    "noise_reduction": false,
+    "speaker_detection": false
+  }
+} 

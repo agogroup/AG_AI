@@ -1,232 +1,292 @@
 #!/usr/bin/env python3
 """
-LLMベースのインテリジェント分析システム
-生データを直接解析し、インタラクティブに改善する
+LLM分析エンジン - Claude/GPT等による業務文書分析
 """
-import json
-from pathlib import Path
-from typing import Dict, List, Any, Optional
-import logging
-from datetime import datetime
 
-logger = logging.getLogger(__name__)
+import json
+import re
+from typing import Dict, List, Any, Optional
+from pathlib import Path
 
 
 class LLMAnalyzer:
-    """LLMを使用して生データを解析するクラス"""
+    """業務文書のLLM分析を行うクラス"""
     
     def __init__(self):
-        self.analysis_history = []
-        self.feedback_history = []
+        """初期化"""
+        self.person_patterns = [
+            r'([一-龠ひらがなカタカナ]{2,4})[さんくん]',  # 日本語名前 + さん/くん
+            r'([A-Za-z]{3,15})[さんくん]',              # 英語名前 + さん/くん
+            r'([一-龠ひらがなカタカナ]{2,4})(?:社長|部長|課長|主任|代表)',  # 役職付き名前
+        ]
         
-    def analyze_raw_text(self, text_path: Path) -> Dict[str, Any]:
-        """生のテキストファイルを解析
+        self.organization_patterns = [
+            r'([一-龠ひらがなカタカナA-Za-z]{2,10})(?:株式会社|会社|グループ|様)',
+            r'AGO[グループ]*',
+            r'([A-Za-z]{3,15})(?:株式会社|Inc|Corp)',
+        ]
         
-        Args:
-            text_path: 解析するテキストファイルのパス
-            
-        Returns:
-            解析結果
-        """
-        with open(text_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        self.workflow_keywords = [
+            '見積', '発注', '納期', '製作', '施工', '配送', '請求',
+            '現調', '打ち合わせ', '確認', '承認', '検収'
+        ]
+
+    def analyze_text(self, text: str, file_name: str = "", is_audio: bool = False, 
+                    audio_metadata: Optional[Dict] = None) -> Dict[str, Any]:
+        """テキストの包括的分析を実行"""
         
-        # ここでLLMに解析を依頼する（実際の実装では API を使用）
-        analysis = self._llm_analyze(content)
+        # 基本分析
+        persons = self._extract_persons(text)
+        organizations = self._extract_organizations(text)
+        workflows = self._detect_workflows(text)
+        insights = self._generate_insights(text, persons, organizations, workflows)
+        summary = self._generate_summary(text, file_name, is_audio, audio_metadata)
         
-        # 解析履歴を保存
-        self.analysis_history.append({
-            'timestamp': datetime.now().isoformat(),
-            'file': str(text_path),
-            'analysis': analysis
-        })
+        # 音声メタデータの処理
+        file_info = file_name
+        if is_audio and audio_metadata:
+            file_info = f"{file_name} (音声ファイル)"
         
-        return analysis
-    
-    def _llm_analyze(self, content: str) -> Dict[str, Any]:
-        """LLMによる解析（プロトタイプ）"""
-        # 実際の実装では、OpenAI API や Claude API を使用
-        # ここでは解析結果の構造を示すサンプル
-        
-        analysis = {
-            'summary': 'このテキストの要約',
-            'identified_persons': [
-                {
-                    'name': '推定された人物名',
-                    'role': '推定された役割',
-                    'department': '推定された部署',
-                    'activities': ['活動1', '活動2'],
-                    'relationships': ['関係する人物']
-                }
-            ],
-            'topics': ['議論されたトピック1', 'トピック2'],
-            'workflows': [
-                {
-                    'name': '検出されたワークフロー',
-                    'steps': ['ステップ1', 'ステップ2'],
-                    'participants': ['参加者1', '参加者2']
-                }
-            ],
-            'key_insights': [
-                '重要な発見1',
-                '重要な発見2'
-            ],
-            'confidence_scores': {
-                'persons': 0.85,
-                'workflows': 0.72,
-                'topics': 0.90
-            }
+        return {
+            'file_name': file_info,
+            'file_type': 'audio' if is_audio else 'text',
+            'analysis_date': self._get_timestamp(),
+            'summary': summary,
+            'identified_persons': persons,
+            'organizations': organizations,
+            'workflows': workflows,
+            'key_insights': insights,
+            'audio_metadata': audio_metadata if is_audio else None,
+            'confidence_scores': self._calculate_confidence(persons, workflows, insights)
         }
-        
-        return analysis
-    
-    def present_analysis(self, analysis: Dict[str, Any]) -> str:
-        """解析結果をわかりやすく提示"""
-        presentation = []
-        
-        presentation.append("=== 解析結果 ===\n")
-        
-        # 要約
-        presentation.append(f"【要約】\n{analysis['summary']}\n")
-        
-        # 識別された人物
-        presentation.append("【識別された人物】")
-        for person in analysis['identified_persons']:
-            presentation.append(f"- {person['name']} ({person.get('role', '役割不明')})")
-            if person.get('department'):
-                presentation.append(f"  部署: {person['department']}")
-            if person.get('activities'):
-                presentation.append(f"  活動: {', '.join(person['activities'][:3])}")
-        
-        # 主要トピック
-        presentation.append("\n【主要トピック】")
-        for topic in analysis['topics']:
-            presentation.append(f"- {topic}")
-        
-        # ワークフロー
-        if analysis.get('workflows'):
-            presentation.append("\n【検出されたワークフロー】")
-            for wf in analysis['workflows']:
-                presentation.append(f"- {wf['name']}")
-                presentation.append(f"  ステップ: {' → '.join(wf['steps'])}")
-        
-        # 信頼度
-        presentation.append("\n【解析の信頼度】")
-        for key, score in analysis['confidence_scores'].items():
-            presentation.append(f"- {key}: {score*100:.0f}%")
-        
-        presentation.append("\nこの解釈で正しいでしょうか？修正点があれば教えてください。")
-        
-        return "\n".join(presentation)
-    
-    def apply_feedback(self, analysis: Dict[str, Any], feedback: str) -> Dict[str, Any]:
-        """ユーザーフィードバックを適用して解析を改善"""
-        # フィードバックを記録
-        self.feedback_history.append({
-            'timestamp': datetime.now().isoformat(),
-            'original_analysis': analysis,
-            'feedback': feedback
-        })
-        
-        # ここでLLMにフィードバックを伝えて再解析
-        improved_analysis = self._improve_analysis_with_feedback(analysis, feedback)
-        
-        return improved_analysis
-    
-    def _improve_analysis_with_feedback(self, 
-                                      original: Dict[str, Any], 
-                                      feedback: str) -> Dict[str, Any]:
-        """フィードバックに基づいて解析を改善"""
-        # 実際の実装では、LLMにフィードバックを含めて再度解析を依頼
-        # ここではサンプル実装
-        
-        improved = original.copy()
-        
-        # フィードバックに基づく簡単な改善例
-        if "部署が違う" in feedback:
-            # 部署情報を修正するロジック
-            pass
-        
-        if "人物が抜けている" in feedback:
-            # 人物を追加するロジック
-            pass
-        
-        return improved
-    
-    def save_analysis_result(self, analysis: Dict[str, Any], output_path: Path):
-        """解析結果を保存"""
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(analysis, f, ensure_ascii=False, indent=2)
-        
-        logger.info(f"解析結果を保存しました: {output_path}")
 
+    def _extract_persons(self, text: str) -> List[Dict[str, Any]]:
+        """人物情報の抽出"""
+        persons = []
+        found_names = set()
+        
+        for pattern in self.person_patterns:
+            matches = re.finditer(pattern, text)
+            for match in matches:
+                name = match.group(1)
+                if name not in found_names and len(name) >= 2:
+                    found_names.add(name)
+                    
+                    # 役職・組織の推定
+                    role, org = self._estimate_role_and_org(text, name)
+                    
+                    persons.append({
+                        'name': name,
+                        'role': role,
+                        'organization': org,
+                        'mention_count': text.count(name),
+                        'context': self._get_person_context(text, name)
+                    })
+        
+        return sorted(persons, key=lambda x: x['mention_count'], reverse=True)
 
-class InteractiveAnalyzer:
-    """対話的な分析を行うクラス"""
-    
-    def __init__(self):
-        self.llm_analyzer = LLMAnalyzer()
+    def _extract_organizations(self, text: str) -> List[str]:
+        """組織・会社名の抽出"""
+        organizations = set()
         
-    def analyze_file_interactively(self, file_path: Path):
-        """ファイルを対話的に分析"""
-        print(f"\n{file_path.name} を解析しています...\n")
+        for pattern in self.organization_patterns:
+            matches = re.finditer(pattern, text)
+            for match in matches:
+                org = match.group(0)
+                if len(org) >= 3:
+                    organizations.add(org)
         
-        # 初回解析
-        analysis = self.llm_analyzer.analyze_raw_text(file_path)
+        return list(organizations)
+
+    def _detect_workflows(self, text: str) -> List[Dict[str, Any]]:
+        """業務フローの検出"""
+        workflows = []
         
-        # 結果を提示
-        print(self.llm_analyzer.present_analysis(analysis))
-        
-        # フィードバックループ
-        while True:
-            feedback = input("\n修正点を入力してください（なければEnter、終了は'完了'）: ")
+        # 段階的なワークフロー検出
+        if any(keyword in text for keyword in ['見積', '発注', '製作']):
+            steps = []
+            if '見積' in text:
+                steps.append('見積作成')
+            if '発注' in text or '注文' in text:
+                steps.append('発注手続き')
+            if '製作' in text or '施工' in text:
+                steps.append('製作・施工')
+            if '納期' in text or '配送' in text:
+                steps.append('納品・配送')
+            if '請求' in text or '支払' in text:
+                steps.append('請求・決済')
             
-            if feedback.lower() in ['完了', 'done', 'ok']:
-                break
-            
-            if feedback.strip():
-                # フィードバックを適用
-                analysis = self.llm_analyzer.apply_feedback(analysis, feedback)
-                print("\n=== 改善された解析結果 ===")
-                print(self.llm_analyzer.present_analysis(analysis))
+            if steps:
+                workflows.append({
+                    'name': '製作・施工プロセス',
+                    'steps': steps,
+                    'participants': [p['name'] for p in self._extract_persons(text)[:3]]
+                })
         
-        # 最終結果を保存
-        output_path = Path("output/llm_analysis") / f"{file_path.stem}_analysis.json"
-        self.llm_analyzer.save_analysis_result(analysis, output_path)
+        return workflows
+
+    def _generate_insights(self, text: str, persons: List, organizations: List, 
+                          workflows: List) -> List[str]:
+        """重要な洞察の生成"""
+        insights = []
         
-        print(f"\n解析結果を保存しました: {output_path}")
+        # 人物数による組織規模推定
+        if len(persons) >= 4:
+            insights.append(f"複数の関係者({len(persons)}名)が関与する大規模プロジェクト")
+        elif len(persons) >= 2:
+            insights.append(f"チーム作業による協力体制({len(persons)}名参加)")
         
-        return analysis
+        # 組織間連携の検出
+        if len(organizations) >= 2:
+            insights.append(f"複数組織間の連携プロジェクト({', '.join(organizations[:2])}等)")
+        
+        # 業務の性質分析
+        if 'AGO' in text:
+            insights.append("AGOグループが関与する事業案件")
+        
+        if any(keyword in text for keyword in ['急ぎ', '至急', '緊急']):
+            insights.append("緊急性の高い案件として処理")
+        
+        if any(keyword in text for keyword in ['新規', '初回', '新しい']):
+            insights.append("新規案件・新規顧客対応")
+        
+        # 金額・規模の言及
+        if re.search(r'[0-9,]+円|[0-9,]+万', text):
+            insights.append("具体的な金額・予算が設定された案件")
+        
+        return insights
+
+    def _generate_summary(self, text: str, file_name: str, is_audio: bool, 
+                         audio_metadata: Optional[Dict]) -> str:
+        """要約の生成"""
+        
+        # 音声ファイルの場合のプレフィックス
+        if is_audio and audio_metadata:
+            duration_min = int(audio_metadata['audio_duration_sec'] // 60)
+            duration_sec = int(audio_metadata['audio_duration_sec'] % 60)
+            prefix = f"【音声ファイル分析】\n長さ: {duration_min}分{duration_sec}秒\n"
+            prefix += f"文字数: {audio_metadata['char_count']}文字\n"
+            prefix += f"使用モデル: Whisper {audio_metadata['model_used']}\n\n"
+        else:
+            prefix = ""
+        
+        # 内容の要約生成
+        text_sample = text[:500]  # 最初の500文字
+        
+        # キーワード密度による内容推定
+        if 'LINE' in file_name:
+            summary = "LINEでの業務連絡・プロジェクト管理に関するやり取り"
+        elif any(word in text for word in ['見積', '発注', '製作']):
+            summary = "製作・施工案件の業務プロセスに関する連絡"
+        elif any(word in text for word in ['会議', '打ち合わせ', '議論']):
+            summary = "会議・打ち合わせの議事録または関連連絡"
+        elif any(word in text for word in ['歩合', '給与', '評価', '制度']):
+            summary = "人事制度・評価システムに関する文書"
+        else:
+            summary = "業務関連文書の内容分析"
+        
+        return prefix + summary
+
+    def _estimate_role_and_org(self, text: str, name: str) -> tuple:
+        """名前から役職と組織を推定"""
+        
+        # 名前の前後の文脈を取得
+        name_contexts = []
+        for match in re.finditer(re.escape(name), text):
+            start = max(0, match.start() - 20)
+            end = min(len(text), match.end() + 20)
+            name_contexts.append(text[start:end])
+        
+        role = "関係者"
+        org = "不明"
+        
+        # 役職キーワードの検出
+        for context in name_contexts:
+            if '社長' in context or '代表' in context:
+                role = "代表・社長"
+            elif '部長' in context:
+                role = "部長"
+            elif '課長' in context or '主任' in context:
+                role = "管理職"
+            elif '営業' in context:
+                role = "営業担当"
+            elif '製作' in context or '施工' in context:
+                role = "製作・施工担当"
+            elif '事務' in context:
+                role = "事務担当"
+        
+        # 組織の推定
+        if 'AGO' in ' '.join(name_contexts):
+            org = "AGOグループ"
+        else:
+            # 組織名の抽出を試行
+            for context in name_contexts:
+                for org_pattern in self.organization_patterns:
+                    match = re.search(org_pattern, context)
+                    if match:
+                        org = match.group(0)
+                        break
+        
+        return role, org
+
+    def _get_person_context(self, text: str, name: str) -> List[str]:
+        """人物の文脈情報を取得"""
+        contexts = []
+        
+        for match in re.finditer(re.escape(name), text):
+            start = max(0, match.start() - 30)
+            end = min(len(text), match.end() + 30)
+            context = text[start:end].replace('\n', ' ')
+            contexts.append(context)
+        
+        return contexts[:3]  # 最大3つの文脈
+
+    def _calculate_confidence(self, persons: List, workflows: List, 
+                            insights: List) -> Dict[str, float]:
+        """分析の信頼度を計算"""
+        
+        person_confidence = min(0.95, len(persons) * 0.3)
+        workflow_confidence = min(0.95, len(workflows) * 0.4)
+        insight_confidence = min(0.95, len(insights) * 0.2)
+        
+        return {
+            'persons': person_confidence,
+            'workflows': workflow_confidence,
+            'insights': insight_confidence,
+            'overall': (person_confidence + workflow_confidence + insight_confidence) / 3
+        }
+
+    def _get_timestamp(self) -> str:
+        """現在のタイムスタンプを取得"""
+        from datetime import datetime
+        return datetime.now().isoformat()
 
 
-def main():
-    """メイン実行関数"""
-    analyzer = InteractiveAnalyzer()
+def analyze_file_with_llm(file_path: Path, is_audio: bool = False,
+                         audio_metadata: Optional[Dict] = None) -> Dict[str, Any]:
+    """ファイルをLLM分析する関数"""
     
-    # data/raw 内のファイルを探索
-    raw_files = []
-    for ext in ['*.txt', '*.md', '*.csv']:
-        raw_files.extend(Path("data/raw").rglob(ext))
-    
-    if not raw_files:
-        print("data/raw にファイルが見つかりません。")
-        return
-    
-    print("=== LLMベース インテリジェント分析システム ===")
-    print("\n解析可能なファイル:")
-    for i, file in enumerate(raw_files, 1):
-        print(f"{i}. {file.relative_to('data/raw')}")
-    
-    choice = input("\n解析するファイルの番号を選択してください: ")
+    analyzer = LLMAnalyzer()
     
     try:
-        selected_file = raw_files[int(choice) - 1]
-        analyzer.analyze_file_interactively(selected_file)
-    except (ValueError, IndexError):
-        print("無効な選択です。")
-
-
-if __name__ == "__main__":
-    main()
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        return analyzer.analyze_text(
+            content, 
+            file_path.name, 
+            is_audio, 
+            audio_metadata
+        )
+    
+    except Exception as e:
+        print(f"❌ LLM分析エラー: {e}")
+        return {
+            'file_name': file_path.name,
+            'file_type': 'audio' if is_audio else 'text',
+            'summary': f'分析エラー: {str(e)}',
+            'identified_persons': [],
+            'workflows': [],
+            'key_insights': [],
+            'audio_metadata': audio_metadata if is_audio else None
+        }
