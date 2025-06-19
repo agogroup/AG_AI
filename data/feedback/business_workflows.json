@@ -1,0 +1,585 @@
+{
+  "business_workflows": {
+    "financial_workflows": {
+      "payment_process": {
+        "name": "支払い業務プロセス",
+        "process_owner": "四ノ宮まゆ",
+        "key_steps": [
+          "請求書受領（メール・LINE・郵送）",
+          "請求内容確認",
+          "振込手配実行",
+          "freee会計へ登録",
+          "証憑管理（印刷・保管）",
+          "税理士へ月次送付"
+        ],
+        "tools_systems": ["freee会計", "銀行オンライン", "LINE", "メール"],
+        "related_personnel": ["菅野友貴（税金関連）", "税理士法人SEASTmanagement"],
+        "payment_schedule": {
+          "fixed_payments": [
+            {"name": "本社前駐車場2台", "bank": "埼玉りそな蕨支店", "amount": "24,000円", "day": 20},
+            {"name": "曲本事務所", "bank": "川口信用金庫武蔵浦和支店", "amount": "155,000円", "day": 20},
+            {"name": "大畑駐車場", "bank": "川口信用金庫武蔵浦和支店", "amount": "17,600円", "day": 20},
+            {"name": "シャンポール管理費", "bank": "千葉銀行中央支店", "amount": "14,060円", "day": 20},
+            {"name": "シャープファイナンス", "bank": "みずほ銀行", "amount": "36,300円", "day": 20},
+            {"name": "巻島社用車駐車場", "bank": "川口信用金庫仲町支店", "amount": "10,000円", "day": 20}
+          ],
+          "total_monthly_fixed": "257,260円"
+        },
+        "pain_points": [
+          "手動での振込作業が多い",
+          "請求書の受領経路が複数（メール・LINE・郵送）",
+          "月次の固定費管理が煩雑"
+        ]
+      },
+      "expense_reimbursement": {
+        "name": "経費精算プロセス",
+        "process_owner": "小林（エリカ）・ゆうき",
+        "key_steps": [
+          "職人がレシートに必要事項記入（日付・現場名・支払方法・担当者名）",
+          "ホワイトボードで案件名確認",
+          "案件別引き出しに投函",
+          "事務員がスプレッドシートに入力",
+          "二重チェック実施",
+          "月1回ゆうきが最終確認",
+          "現場完了時に総合収支確認"
+        ],
+        "tools_systems": ["ホワイトボード", "引き出しシステム", "スプレッドシート", "アンドパッド"],
+        "related_personnel": ["職人全員", "小林（エリカ）", "ゆうき", "菅野"],
+        "new_system_features": {
+          "whiteboard_drawers": "最大6案件同時管理可能",
+          "double_check": "入力ミス防止のための二重チェック体制",
+          "monthly_cycle": "月次での税理士送付サイクル確立"
+        },
+        "pain_points": [
+          "レシート記入漏れ（特に現場名）",
+          "案件別収支の把握が困難",
+          "属人的な処理（松山さん依存）"
+        ]
+      },
+      "tax_payment": {
+        "name": "税金支払いプロセス",
+        "process_owner": "菅野友貴",
+        "key_steps": [
+          "税理士からの納付書受領",
+          "納付金額確認",
+          "銀行での振込手続き",
+          "納付証明書の保管",
+          "freee会計への記録"
+        ],
+        "tools_systems": ["銀行窓口", "freee会計"],
+        "related_personnel": ["税理士", "菅野隆太"],
+        "pain_points": [
+          "銀行窓口での手続きが必要",
+          "オンライン化できない"
+        ]
+      },
+      "salary_payment": {
+        "name": "給与支払いプロセス",
+        "process_owner": "四ノ宮まゆ",
+        "key_steps": [
+          "歩合計算実施",
+          "勤務日数確認",
+          "施工班・菅野さんへ確認",
+          "給与振込実行（毎月20日）",
+          "金子さんへ請求書発行依頼",
+          "タムさんの受領書作成",
+          "freee人事・会計へ登録"
+        ],
+        "tools_systems": ["freee人事", "freee会計", "銀行オンライン"],
+        "related_personnel": ["施工班全員", "菅野隆太", "金子陽斗", "タムさん"],
+        "pain_points": [
+          "歩合計算の複雑さ",
+          "確認プロセスが多い"
+        ]
+      },
+      "invoice_processing": {
+        "name": "請求書処理プロセス",
+        "process_owner": "四ノ宮まゆ",
+        "key_steps": [
+          "見積書作成（必要に応じて）",
+          "請求書作成",
+          "送付方法選択（LINE・メール・郵送）",
+          "定期請求設定（リース等）",
+          "freee会計へ登録"
+        ],
+        "tools_systems": ["freee会計", "LINE", "メール", "郵送代行"],
+        "related_personnel": ["営業担当", "クライアント"],
+        "regular_clients": [
+          "アドセック株式会社（注文書→請求書→郵送）",
+          "リース定期請求（毎月月末または5日）"
+        ],
+        "pain_points": [
+          "送付方法がクライアントによって異なる",
+          "定期請求の管理"
+        ]
+      }
+    },
+    "production_order_workflows": {
+      "order_receiving": {
+        "name": "受注プロセス",
+        "process_owner": "営業担当→四ノ宮まゆ",
+        "key_steps": [
+          "クライアントからの問い合わせ受付",
+          "要件確認・仕様決定",
+          "見積書作成・提出",
+          "クライアント承認取得",
+          "アンドパッドに案件登録",
+          "製作・施工手配開始"
+        ],
+        "tools_systems": ["LINE", "メール", "アンドパッド", "freee"],
+        "related_personnel": ["営業担当", "四ノ宮まゆ", "菅里奈"],
+        "pain_points": [
+          "要件定義の曖昧さ",
+          "仕様変更への対応"
+        ]
+      },
+      "data_preparation": {
+        "name": "データ準備・変換プロセス",
+        "process_owner": "四ノ宮まゆ",
+        "key_steps": [
+          "入稿データ確認（サイズ・形式）",
+          "必要に応じて調整・修正",
+          "データ形式変換（業者別要件対応）",
+          "ANDPADまたはHD保存",
+          "業者への送付"
+        ],
+        "tools_systems": ["Illustrator", "ANDPAD", "外付けHD"],
+        "format_requirements": {
+          "杉戸工芸": "eps形式必須、1GB超の場合PDF変換",
+          "一般": "PDF形式可",
+          "カッティング": "PDF不可"
+        },
+        "related_personnel": ["デザイナー", "各業者担当"],
+        "pain_points": [
+          "業者ごとの形式要件が異なる",
+          "大容量データの処理",
+          "変換作業の手間"
+        ]
+      },
+      "vendor_management": {
+        "name": "業者管理プロセス",
+        "process_owner": "四ノ宮まゆ",
+        "key_vendors": {
+          "シート・カッティング": [
+            {"name": "株式会社杉戸工芸", "email": "data@sugito-kogei.com", "products": "IJシート・カッティング・フォグラス"}
+          ],
+          "ターポリン・FF": [
+            {"name": "インクジェットハウス", "url": "https://www.inkjet-house.jp/", "products": "ターポリン・FF"},
+            {"name": "サインアーテック", "contact": "松本様", "email": "matsumoto-h@signartec.co.jp", "products": "特殊ターポリン・FF"}
+          ],
+          "壁紙印刷": [
+            {"name": "とまと出力", "url": "https://tomato-print.com/", "products": "壁紙印刷"}
+          ],
+          "資材": [
+            {"name": "株式会社サンセイ", "contact": "赤荻様", "email": "sansei-sign@sweet.ocn.ne.jp", "products": "アルポリ・フレーム・ファザード"},
+            {"name": "サインシティ", "url": "https://www.trade-sign.com/", "products": "アルポリ（地方）"},
+            {"name": "トシン電機株式会社", "contact": "関野様", "email": "oomiya-ofc@toshingroup.co.jp", "products": "電化製品・ダイノック"},
+            {"name": "デコラテックジャパン", "contact": "坂本様", "email": "sakamoto-m@decoratech.co.jp", "products": "プライマー缶・3M製品"}
+          ]
+        },
+        "key_steps": [
+          "業者選定（製品・納期・価格）",
+          "発注実行",
+          "納期管理",
+          "品質確認",
+          "請求書処理"
+        ],
+        "tools_systems": ["メール", "LINE", "発注管理表"],
+        "pain_points": [
+          "業者ごとの対応方法が異なる",
+          "納期遅延リスク"
+        ]
+      },
+      "delivery_invoicing": {
+        "name": "納品・請求プロセス",
+        "process_owner": "現場監督→四ノ宮まゆ",
+        "key_steps": [
+          "製作完了確認",
+          "品質検査",
+          "現場への配送手配",
+          "施工完了確認",
+          "完了写真撮影",
+          "請求書発行",
+          "入金確認"
+        ],
+        "tools_systems": ["アンドパッド", "カメラ", "freee"],
+        "related_personnel": ["現場監督", "施工班", "四ノ宮まゆ"],
+        "pain_points": [
+          "完了確認の遅れ",
+          "写真管理の煩雑さ"
+        ]
+      }
+    },
+    "project_management_workflows": {
+      "andpad_case_creation": {
+        "name": "ANDPAD案件作成プロセス",
+        "process_owner": "菅里奈",
+        "key_steps": [
+          "案件情報受領",
+          "ANDPAD新規案件作成",
+          "基本情報入力",
+          "写真アップロード",
+          "現調資料まとめ",
+          "関係者への共有設定"
+        ],
+        "tools_systems": ["ANDPAD", "Googleドライブ"],
+        "related_personnel": ["営業担当", "現場監督", "施工班"],
+        "pain_points": [
+          "案件名の不統一",
+          "情報入力の重複"
+        ]
+      },
+      "photo_documentation": {
+        "name": "写真・現地調査記録プロセス",
+        "process_owner": "現場監督→菅里奈",
+        "key_steps": [
+          "現地調査実施",
+          "写真撮影（施工前・施工中・施工後）",
+          "測量データ記録",
+          "ANDPADへアップロード",
+          "フォルダ整理",
+          "関係者への共有"
+        ],
+        "tools_systems": ["カメラ", "ANDPAD", "測量機器"],
+        "related_personnel": ["現場監督", "施工班", "菅里奈"],
+        "pain_points": [
+          "写真の整理が煩雑",
+          "アップロード忘れ"
+        ]
+      },
+      "schedule_management": {
+        "name": "スケジュール管理プロセス",
+        "process_owner": "菅里奈",
+        "key_steps": [
+          "案件スケジュール受領",
+          "Googleカレンダーへ入力",
+          "関係者への共有設定",
+          "リマインダー設定",
+          "変更時の更新・通知"
+        ],
+        "tools_systems": ["Googleカレンダー", "LINE", "ANDPAD"],
+        "related_personnel": ["全社員", "協力業者"],
+        "pain_points": [
+          "複数システムでの管理",
+          "変更連絡の漏れ"
+        ]
+      },
+      "daily_report_management": {
+        "name": "日報管理プロセス",
+        "process_owner": "菅里奈",
+        "key_steps": [
+          "他店舗からの日報受領",
+          "内容確認",
+          "システムへの入力",
+          "必要に応じて修正・変更",
+          "月次集計"
+        ],
+        "tools_systems": ["日報システム", "Excel"],
+        "related_personnel": ["他店舗スタッフ", "管理者"],
+        "pain_points": [
+          "手動入力の手間",
+          "フォーマットの不統一"
+        ]
+      }
+    },
+    "hr_administrative_workflows": {
+      "health_insurance": {
+        "name": "健康保険手続きプロセス",
+        "process_owner": "菅里奈",
+        "key_steps": [
+          "加入・変更申請受付",
+          "必要書類の確認",
+          "申請書類作成",
+          "協会けんぽへ提出",
+          "保険証受領",
+          "本人への交付"
+        ],
+        "tools_systems": ["協会けんぽシステム", "書類管理"],
+        "related_personnel": ["新入社員", "退職者", "扶養家族変更者"],
+        "pain_points": [
+          "書類の不備による手戻り",
+          "処理期間の長さ"
+        ]
+      },
+      "recruitment": {
+        "name": "採用プロセス",
+        "process_owner": "染谷→菅野",
+        "key_steps": [
+          "求人媒体選定（Indeed/バイトル/タイミー検討）",
+          "求人原稿作成",
+          "掲載開始",
+          "応募者対応",
+          "面接実施",
+          "採用決定",
+          "入社手続き"
+        ],
+        "tools_systems": ["Indeed", "バイトル", "タイミー（検討中）"],
+        "recruitment_strategy": {
+          "upper_stream": "Indeed/ビズリーチで経験者採用",
+          "lower_stream": "タイミーで日雇い→正社員登用",
+          "target": "即戦力となる職人、特に大沢さんタイプ"
+        },
+        "related_personnel": ["染谷", "菅野", "大沢"],
+        "pain_points": [
+          "給与水準の競争力不足（月30万〜）",
+          "既存社員との給与バランス",
+          "求人原稿の訴求力不足"
+        ]
+      },
+      "training_onboarding": {
+        "name": "研修・教育プロセス",
+        "process_owner": "各部門責任者",
+        "key_steps": [
+          "入社オリエンテーション",
+          "業務説明・引き継ぎ",
+          "OJT実施",
+          "定期フォローアップ",
+          "評価・フィードバック"
+        ],
+        "tools_systems": ["マニュアル", "チェックリスト"],
+        "related_personnel": ["新入社員", "教育担当者"],
+        "pain_points": [
+          "マニュアルの未整備",
+          "教育体制の属人化"
+        ]
+      }
+    },
+    "new_business_workflows": {
+      "cti_implementation": {
+        "name": "CTIシステム導入フロー",
+        "process_owner": "菅野→林さんチーム",
+        "key_steps": [
+          "現状のピクミン数・顧客数確認",
+          "費用対効果分析（月4万円）",
+          "林さんチームへ相談",
+          "導入スケジュール確認",
+          "データ移行準備",
+          "契約手続き",
+          "システム設定",
+          "スタッフ研修",
+          "運用開始"
+        ],
+        "tools_systems": ["CTIシステム", "既存顧客データ"],
+        "decision_criteria": {
+          "minimum_pikmin": "10名以上",
+          "minimum_customers": "一定の顧客ベース",
+          "readiness": "6月の状況を見て判断"
+        },
+        "related_personnel": ["菅野", "染谷", "林さんチーム"],
+        "pain_points": [
+          "初期のランニングコスト",
+          "現場スタッフのITリテラシー",
+          "データ移行の手間"
+        ]
+      },
+      "led_business": {
+        "name": "LED事業プロセス",
+        "process_owner": "牧島→磯子屋",
+        "key_steps": [
+          "設置場所確認",
+          "電源確認（屋内/屋外）",
+          "機器選定（制御装置・サイズ）",
+          "見積作成",
+          "施工計画",
+          "設置工事",
+          "動作確認",
+          "リモート管理設定"
+        ],
+        "tools_systems": ["設計ソフト", "リモート管理システム"],
+        "installation_types": {
+          "indoor": ["天吊り", "壁掛け", "スタンド"],
+          "outdoor": ["壁面設置", "特殊設置"]
+        },
+        "related_personnel": ["牧島", "磯子屋", "電気工事士"],
+        "pain_points": [
+          "データ消失リスク（バックアップ未整備）",
+          "顧客のPC操作ミス",
+          "遠隔サポートの限界"
+        ]
+      },
+      "pikumin_business": {
+        "name": "ピクミン事業運営フロー",
+        "process_owner": "染谷",
+        "key_steps": [
+          "日雇い労働者募集（タイミー活用）",
+          "現場アサイン",
+          "勤怠管理",
+          "評価・選別",
+          "優秀者の正社員登用打診",
+          "CTIシステムでの管理（将来）"
+        ],
+        "tools_systems": ["タイミー", "CTIシステム（予定）", "勤怠管理"],
+        "business_model": "人材派遣的なビジネスモデル",
+        "related_personnel": ["染谷", "菅さん（将来の管理候補）"],
+        "pain_points": [
+          "管理システムの未整備",
+          "品質のばらつき",
+          "教育コスト"
+        ]
+      },
+      "vending_machine": {
+        "name": "自動販売機事業",
+        "process_owner": "小林（検討中）",
+        "key_steps": [
+          "商品ラインナップ検討",
+          "仕入先選定（Amazon等）",
+          "価格設定（100円均一検討）",
+          "在庫補充",
+          "売上管理"
+        ],
+        "tools_systems": ["自動販売機", "在庫管理"],
+        "business_purpose": "話題作り・ブランディング",
+        "product_ideas": [
+          "昆虫食（話題性）",
+          "紙パック飲料",
+          "ヤクルト系",
+          "珍しい飲料"
+        ],
+        "related_personnel": ["小林", "菅野"],
+        "pain_points": [
+          "収益性は二の次",
+          "商品選定の基準"
+        ]
+      }
+    },
+    "communication_patterns": {
+      "line_usage": {
+        "name": "LINE活用パターン",
+        "categories": {
+          "urgent_communication": {
+            "purpose": "緊急連絡・即時対応",
+            "users": ["現場スタッフ", "管理者"],
+            "examples": ["施工完了報告", "緊急の発注依頼"]
+          },
+          "order_requests": {
+            "purpose": "発注依頼",
+            "users": ["菅野→四ノ宮", "現場→事務"],
+            "examples": ["資材発注", "シート製作依頼"]
+          },
+          "photo_sharing": {
+            "purpose": "現場写真共有",
+            "users": ["現場スタッフ→事務", "施工班→管理者"],
+            "examples": ["完了写真", "現調写真"]
+          },
+          "expense_reports": {
+            "purpose": "経費精算連絡",
+            "users": ["職人→事務"],
+            "examples": ["レシート写真", "立替報告"]
+          }
+        },
+        "pain_points": [
+          "情報の散在",
+          "検索性の低さ",
+          "既読管理の難しさ"
+        ]
+      },
+      "email_communication": {
+        "name": "メール活用パターン",
+        "categories": {
+          "vendor_orders": {
+            "purpose": "正式な発注",
+            "users": ["四ノ宮→各業者"],
+            "cc": "営業グループGmail（88g）"
+          },
+          "invoice_delivery": {
+            "purpose": "請求書送付",
+            "users": ["四ノ宮→クライアント"],
+            "format": "PDF添付"
+          },
+          "formal_documents": {
+            "purpose": "契約書・見積書",
+            "users": ["営業→クライアント"],
+            "storage": "ANDPAD/Googleドライブ"
+          }
+        },
+        "pain_points": [
+          "CCの管理",
+          "添付ファイルサイズ"
+        ]
+      },
+      "internal_vs_external": {
+        "name": "内部・外部コミュニケーション",
+        "internal": {
+          "primary_tool": "LINE",
+          "secondary_tools": ["口頭", "ホワイトボード"],
+          "characteristics": "即時性重視、インフォーマル"
+        },
+        "external": {
+          "primary_tool": "メール",
+          "secondary_tools": ["電話", "LINE（一部クライアント）"],
+          "characteristics": "記録重視、フォーマル"
+        },
+        "pain_points": [
+          "ツールの使い分けルール不明確",
+          "情報共有の抜け漏れ"
+        ]
+      }
+    }
+  },
+  "improvement_recommendations": {
+    "high_priority": [
+      {
+        "area": "経費精算システム",
+        "current_issue": "属人的で案件別収支が不明確",
+        "recommendation": "ホワイトボード×引き出しシステムの完全運用",
+        "expected_outcome": "案件別収支の可視化、処理時間50%削減"
+      },
+      {
+        "area": "発注プロセス",
+        "current_issue": "Googleフォーム未活用、情報散在",
+        "recommendation": "Googleフォーム→スプレッドシート自動連携の実装",
+        "expected_outcome": "発注履歴の一元管理、記入漏れ防止"
+      },
+      {
+        "area": "CTIシステム導入",
+        "current_issue": "電話対応の非効率性",
+        "recommendation": "6月の状況を見て早期導入判断",
+        "expected_outcome": "顧客対応の効率化、履歴管理の改善"
+      }
+    ],
+    "medium_priority": [
+      {
+        "area": "採用戦略",
+        "current_issue": "求人媒体の効果不明、給与競争力不足",
+        "recommendation": "タイミー活用による下流アプローチ強化",
+        "expected_outcome": "採用コスト削減、適性判断の精度向上"
+      },
+      {
+        "area": "LED事業データ管理",
+        "current_issue": "バックアップ体制不備",
+        "recommendation": "外部メモリによるバックアップ体制構築",
+        "expected_outcome": "データ消失リスクの解消"
+      }
+    ],
+    "low_priority": [
+      {
+        "area": "自動販売機事業",
+        "current_issue": "商品戦略未確定",
+        "recommendation": "話題性重視の商品選定",
+        "expected_outcome": "ブランディング効果"
+      }
+    ]
+  },
+  "system_integration_map": {
+    "core_systems": {
+      "ANDPAD": ["案件管理", "写真管理", "スケジュール"],
+      "freee": ["会計", "人事", "請求"],
+      "Googleサービス": ["カレンダー", "ドライブ", "フォーム", "スプレッドシート"],
+      "LINE": ["即時連絡", "写真共有", "簡易報告"]
+    },
+    "planned_systems": {
+      "CTIシステム": ["顧客管理", "電話連携", "履歴管理"],
+      "AI活用": ["音声認識", "自動要約", "検索効率化"]
+    }
+  },
+  "metadata": {
+    "created_date": "2025-06-18",
+    "created_by": "AI分析システム",
+    "data_sources": [
+      "00_new/01.md～15",
+      "既存knowledge_base.json",
+      "会議録・業務記録"
+    ],
+    "version": "1.0"
+  }
+}
