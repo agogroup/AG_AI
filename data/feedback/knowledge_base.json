@@ -19,6 +19,10 @@
         {
           "name": "菅野龍太",
           "role": "プロジェクトマネージャー"
+        },
+        {
+          "name": "かんの",
+          "note": "フルネームが菅野隆太"
         }
       ],
       "last_updated": "2025-06-18T16:00:00"
@@ -56,6 +60,216 @@
       ],
       "last_updated": "2025-06-18T16:30:00"
     },
+    "大沢": {
+      "correct_info": {
+        "name": "大沢",
+        "line_name": "あいうえお",
+        "role": "内装工事責任者",
+        "department": "AGOグループ施工部門",
+        "activities": [
+          "内装工事統括",
+          "現場監督",
+          "工程管理",
+          "メンバー管理",
+          "品質管理"
+        ],
+        "background": "新築木造建築の経験を持つ"
+      },
+      "common_mistakes": [
+        {
+          "name": "大澤",
+          "note": "大沢が正しい"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
+    "磯ヶ谷": {
+      "correct_info": {
+        "name": "磯ヶ谷",
+        "role": "施工責任者",
+        "department": "AGOグループ施工部門",
+        "activities": [
+          "ムービングサイネージ設置",
+          "ネットワーク構築",
+          "材料発注管理",
+          "現場統括",
+          "技術指導"
+        ]
+      },
+      "common_mistakes": [
+        {
+          "name": "礒ヶ谷",
+          "note": "磯ヶ谷が正しい"
+        },
+        {
+          "name": "磯谷",
+          "note": "磯ヶ谷が正しい（ヶは小さいケ）"
+        },
+        {
+          "name": "磯ケ谷",
+          "note": "磯ヶ谷が正しい（ヶは小さいケ、カタカナではない）"
+        },
+        {
+          "name": "いそがや",
+          "note": "読みは「いそがや」で正しい"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
+    "金子陽斗": {
+      "correct_info": {
+        "name": "金子陽斗",
+        "reading": "かねこ はると",
+        "alternate_name": "小池（旧姓）",
+        "role": "看板工事責任者",
+        "department": "AGOグループ施工部門",
+        "activities": [
+          "看板工事管理",
+          "現場施工",
+          "見積作成",
+          "現地調査",
+          "シート看板施工"
+        ],
+        "note": "小池は旧姓で、現在も小池と呼ばれることがある"
+      },
+      "common_mistakes": [
+        {
+          "name": "金子太陽",
+          "note": "金子陽斗が正しい（読みは「はると」）"
+        },
+        {
+          "name": "金子ようと",
+          "note": "読みは「はると」"
+        },
+        {
+          "name": "金子",
+          "note": "フルネームは金子陽斗（かねこ はると）"
+        },
+        {
+          "name": "小池くん",
+          "note": "旧姓で呼ばれることもある"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
+    "巻島": {
+      "correct_info": {
+        "name": "巻島",
+        "role": "電気工事担当",
+        "department": "AGOグループ施工部門",
+        "activities": [
+          "電気設備工事",
+          "看板補助作業",
+          "内装サポート",
+          "配線工事"
+        ],
+        "background": "元プラント系電気工事、電気工事での独立を目指す",
+        "note": "愛称：マキシマ"
+      },
+      "common_mistakes": [
+        {
+          "name": "幕島",
+          "note": "巻島が正しい"
+        },
+        {
+          "name": "牧島",
+          "note": "巻島が正しい"
+        },
+        {
+          "name": "マキシマ",
+          "note": "愛称として使われることがある"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
+    "リチャード": {
+      "correct_info": {
+        "name": "リチャード",
+        "role": "施工スタッフ",
+        "department": "AGOグループ施工部門",
+        "activities": [
+          "現場施工補助",
+          "手間仕事全般",
+          "看板・内装両方対応"
+        ]
+      },
+      "common_mistakes": [
+        {
+          "name": "RICHARD",
+          "note": "カタカナ表記が一般的"
+        },
+        {
+          "name": "畑田",
+          "note": "本名かもしれないが、通常リチャードと呼ばれる"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
+    "染谷雅人": {
+      "correct_info": {
+        "name": "染谷雅人",
+        "role": "施工管理・事務サポート・求人担当",
+        "department": "AGOグループ施工部門",
+        "activities": [
+          "塗装・クリーニング（外注扱い）",
+          "求人募集管理",
+          "顧客対応",
+          "人への指示出し",
+          "事務サポート"
+        ],
+        "note": "LINE名: K.MASATO"
+      },
+      "common_mistakes": [
+        {
+          "name": "ソメア",
+          "note": "染谷が正しい"
+        },
+        {
+          "name": "染谷",
+          "note": "フルネームは染谷雅人"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
+    "小林エリカ": {
+      "correct_info": {
+        "name": "小林エリカ",
+        "line_name": "ERIKA",
+        "role": "事務スタッフ",
+        "department": "AGOグループ事務部門",
+        "activities": [
+          "事務作業",
+          "荷物受け取り",
+          "在庫管理",
+          "システム操作"
+        ]
+      },
+      "common_mistakes": [
+        {
+          "name": "小林",
+          "note": "フルネームは小林エリカ"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
+    "菅里奈": {
+      "correct_info": {
+        "name": "菅里奈",
+        "reading": "すが りな",
+        "role": "事務スタッフ",
+        "department": "AGOグループ事務部門",
+        "activities": [
+          "事務作業"
+        ]
+      },
+      "common_mistakes": [
+        {
+          "name": "リナ",
+          "note": "フルネームは菅里奈"
+        }
+      ],
+      "last_updated": "2025-06-19T00:00:00"
+    },
     "末武修平": {
       "correct_info": {
         "name": "末武修平",
@@ -73,8 +287,11 @@
       "common_mistakes": [
         {
           "role": "営業担当",
-          "department": "AGOグループ",
-          "note": "AGOの社員と誤認されやすい"
+          "note": "業務改善・AI技術者が正しい"
+        },
+        {
+          "role": "フリーランス（仲介者）",
+          "note": "AGOグループの正社員"
         }
       ],
       "last_updated": "2025-06-18T16:00:00"
@@ -276,11 +493,25 @@
     "AGOグループ": {
       "business_type": "看板・内装・デジタルサイネージ施工会社",
       "key_relationships": {
-        "フリーランス仲介": [
-          "末武"
-        ],
+        "フリーランス仲介": [],
         "主要クライアント": [
-          "Bitoiro（美十色）"
+          "ACQUA各店舗",
+          "BUZZグループ"
+        ],
+        "主要外注先": [
+          "杉戸工芸（看板製作）",
+          "三山（設備工事）",
+          "染谷（塗装・クリーニング）"
+        ],
+        "採用プラットフォーム": [
+          "Indeed",
+          "Bizreach"
+        ],
+        "使用システム": [
+          "LINE（メインコミュニケーション）",
+          "AndPad（工事管理）",
+          "Google Calendar（スケジュール管理）",
+          "Plaud Note（会議録音）"
         ]
       }
     }
@@ -685,6 +916,85 @@
         "department": "AGOグループ"
       },
       "context": "ユーザーフィードバック"
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "type": "entity",
+      "original": {
+        "name": "篠宮",
+        "role": "発注管理"
+      },
+      "corrected": {
+        "name": "四ノ宮まゆ",
+        "role": "製作担当・経理総務"
+      },
+      "context": "音声認識の誤りを修正"
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "type": "entity",
+      "original": {
+        "name": "礒ヶ谷",
+        "role": "施工責任者"
+      },
+      "corrected": {
+        "name": "磯ヶ谷",
+        "role": "施工責任者"
+      },
+      "context": "漢字の誤りを修正（ヶは小さいケ）"
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "type": "entity",
+      "original": {
+        "name": "小池",
+        "note": "別人として扱っていた"
+      },
+      "corrected": {
+        "name": "金子はると",
+        "alternate_name": "小池（旧姓）",
+        "note": "同一人物"
+      },
+      "context": "小池は旧姓、金子はるとが現在の名前"
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "type": "entity",
+      "original": {
+        "name": "磯ケ谷",
+        "note": "カタカナのケ"
+      },
+      "corrected": {
+        "name": "磯ヶ谷",
+        "note": "小さいケ（ヶ）"
+      },
+      "context": "ケはカタカナではなく小さいケ"
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "type": "entity",
+      "original": {
+        "name": "金子陽斗",
+        "reading": "かねこ ようと"
+      },
+      "corrected": {
+        "name": "金子陽斗",
+        "reading": "かねこ はると"
+      },
+      "context": "読みは「はると」、表記は金子陽斗"
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "type": "entity",
+      "original": {
+        "name": "末武",
+        "role": "フリーランス（仲介者）"
+      },
+      "corrected": {
+        "name": "末武",
+        "role": "業務改善・AI技術者"
+      },
+      "context": "役割の修正、AGOグループの正社員"
     }
   ]
 }

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "output/AGO_業務標準化マニュアル.md",
+                "file": "output/AGO_Notion設計提案書.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGO_業務標準化マニュアル"
+              "title": "AGO_Notion設計提案書"
             }
           }
         ]
@@ -168,6 +168,7 @@
   },
   "active": "60481e7dc88e2e69",
   "lastOpenFiles": [
+    "output/AGO_業務標準化マニュアル.md",
     "output/AGO_Notion設計提案書.md",
     "output/AGO_経費管理改善マニュアル.md",
     "output/AGO_採用戦略マニュアル.md",
@@ -198,7 +199,6 @@
     "output/AGO_顧客データベース.md",
     "output/AGO_採用・労務管理ガイドライン.md",
     "output/AGO_財務取引管理表.md",
-    "output/AGO_AI活用ガイドライン.md",
     "test_whisper_models.py",
     "test_audio_system.py",
     "scripts/audio_processor_no_ffmpeg.py",
