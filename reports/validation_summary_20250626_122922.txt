@@ -1,0 +1,14 @@
+AGO Profiling System Migration Validation Report
+Generated: 2025-06-26T12:29:22.959437
+==================================================
+
+Overall Status: OK
+
+00_new -> raw/documents/current
+  Status: OK
+  No issues found
+
+01_analyzed -> processed/analyzed
+  Status: OK
+  No issues found
+

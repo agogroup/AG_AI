@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-06-26T12:29:22.959437",
+  "overall_status": "OK",
+  "validations": [
+    {
+      "source": "00_new",
+      "target": "raw/documents/current",
+      "status": "OK",
+      "issues": []
+    },
+    {
+      "source": "01_analyzed",
+      "target": "processed/analyzed",
+      "status": "OK",
+      "issues": []
+    }
+  ]
+}

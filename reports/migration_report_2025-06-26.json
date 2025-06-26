@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-06-26T12:14:29.746398",
+  "timestamp": "2025-06-26T12:29:29.968699",
   "directories": {
     "old": {
-      "00_new": 25,
+      "00_new": 0,
       "01_analyzed": 119
     },
     "new": {
       "raw_current": 25,
-      "processed_analyzed": 0
+      "processed_analyzed": 119
     }
   },
   "sync_rates": {
     "00_new_to_raw": 100.0,
-    "01_analyzed_to_processed": 0.0
+    "01_analyzed_to_processed": 100.0
   },
   "issues": []
 }

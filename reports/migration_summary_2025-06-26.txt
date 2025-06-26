@@ -1,20 +1,20 @@
 AGO Profiling System Migration Report
-Generated: 2025-06-26T12:14:29.746398
+Generated: 2025-06-26T12:29:29.968699
 ==================================================
 
 File Counts:
 --------------------
 Old Structure:
-  00_new: 25 files
+  00_new: 0 files
   01_analyzed: 119 files
 
 New Structure:
   raw_current: 25 files
-  processed_analyzed: 0 files
+  processed_analyzed: 119 files
 
 Sync Rates:
 --------------------
   00_new_to_raw: 100.0%
-  01_analyzed_to_processed: 0.0%
+  01_analyzed_to_processed: 100.0%
 
 No issues found - sync is complete!
