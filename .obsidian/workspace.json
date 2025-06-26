@@ -168,6 +168,7 @@
   },
   "active": "60481e7dc88e2e69",
   "lastOpenFiles": [
+    "scripts/validate_migration.py",
     "logs/sync_stats_20250626_122754.json",
     "data/processed/analyzed/2025-06-19/test_document.txt",
     "data/processed/analyzed/2025-06-19/2025-06-04 13_29_14_transcription.txt",
@@ -194,7 +195,6 @@
     "data/processed/analyzed/2025-06-18/統合分析レポート_組織改革と事業拡大戦略.md",
     "data/processed/analyzed/2025-06-13/[LINE]【横浜　AMURU［仮］】.txt",
     "data/processed/analyzed/2025-06-13/[LINE]【アドセック様　見積経理等】.txt",
-    "data/processed/analyzed/2025-06-13/[LINE]【宇都宮　鈴木さん】.txt",
     "data/README.md",
     "data/migration_log_phase1.md",
     "data/processed/2025-06-19_batch/23.md",
