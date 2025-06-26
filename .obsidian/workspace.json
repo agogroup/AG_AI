@@ -168,6 +168,8 @@
   },
   "active": "60481e7dc88e2e69",
   "lastOpenFiles": [
+    "backups/old_structure_20250626.tar.gz",
+    "backups",
     "reports/validation_summary_20250626_122922.txt",
     "reports/validation_report_20250626_122922.json",
     "scripts/validate_migration.py",
@@ -178,8 +180,6 @@
     "data/processed/analyzed/2025-06-19/6月19日.md",
     "data/processed/analyzed/2025-06-19/2025-06-04 13_29_14_metadata.json",
     "data/processed/analyzed/2025-06-19/sample_text.txt",
-    "data/processed/analyzed/2025-06-19/2025-06-04 13_29_14_transcription.json",
-    "data/processed/analyzed/2025-06-19/2025-06-04 13_29_14.mp3",
     "data/processed/analyzed/2025-06-18/追加データ統合ログ_files_13-15.md",
     "data/processed/analyzed/2025-06-18/システム導入実態調査レポート.md",
     "data/processed/analyzed/2025-06-18/追加データ統合レポート_files_13-15.md",
