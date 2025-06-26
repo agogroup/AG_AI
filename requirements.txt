@@ -1,16 +1,37 @@
 # AGO Group インテリジェント業務分析システム - 依存関係
 
+# Core requirements
+openai-whisper>=20231117
+pydub
+soundfile
+librosa
+# ffmpeg-python  # コメントアウト - ffmpegに依存
+
+# Audio processing
+pyaudio
+scipy
+numpy
+
+# API integrations
+openai>=1.0.0
+
+# Data processing
+pandas
+python-dateutil
+
+# Notion integration (optional)
+notion-client>=2.0.0
+
+# Development tools (optional)
+ipython
+jupyter
+
 # 基本的なパッケージ
-python-dateutil>=2.8   # 日時処理
 psutil>=5.8.0          # システム情報取得
 
-# 音声処理
-openai-whisper>=20231117  # 音声文字起こし（Whisper）
-torch                     # PyTorch（Whisper依存）
-torchaudio               # 音声処理（Whisper依存）
+# 音声処理は削除済み（実装しない方針）
 
 # 将来的なLLM統合のための準備
-# openai>=1.0          # OpenAI API（必要時にコメントアウトを外す）
 # anthropic>=0.3       # Claude API（必要時にコメントアウトを外す）
 
 # 開発ツール（オプション）

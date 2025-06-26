@@ -1,0 +1,20 @@
+{
+  "phase": 2,
+  "start_date": "2025-06-26",
+  "mappings": {
+    "00_new": "raw/documents/current",
+    "01_analyzed": "processed/analyzed"
+  },
+  "sync_interval": "hourly",
+  "backup_enabled": true,
+  "sync_settings": {
+    "skip_duplicates": true,
+    "preserve_timestamps": true,
+    "log_level": "INFO"
+  },
+  "excluded_patterns": [
+    "*.tmp",
+    "*.lock",
+    ".DS_Store"
+  ]
+}
