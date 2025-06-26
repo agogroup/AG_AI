@@ -1015,5 +1015,133 @@
   "statistics": {
     "total_processed": 101,
     "total_archived": 0
-  }
+  },
+  "notion_migration": [
+    {
+      "old_path": "data/00_new/notion_20250612_経費管理システムと人事体制の整備に関する会議.txt",
+      "new_path": "data/sources/notion/notion_20250612_経費管理システムと人事体制の整備に関する会議.txt",
+      "migrated_at": "2025-06-26T12:20:19.222393"
+    },
+    {
+      "old_path": "data/00_new/notion_20250626_公式LINE改善会議.txt",
+      "new_path": "data/sources/notion/notion_20250626_公式LINE改善会議.txt",
+      "migrated_at": "2025-06-26T12:20:19.222629"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_組織構造と採用戦略についてのディスカッション.txt",
+      "new_path": "data/sources/notion/notion_20250612_組織構造と採用戦略についてのディスカッション.txt",
+      "migrated_at": "2025-06-26T12:20:19.222813"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_議事録（詳細版）.txt",
+      "new_path": "data/sources/notion/notion_20250612_議事録（詳細版）.txt",
+      "migrated_at": "2025-06-26T12:20:19.223030"
+    },
+    {
+      "old_path": "data/00_new/notion_20250618_6月18日菅野.txt",
+      "new_path": "data/sources/notion/notion_20250618_6月18日菅野.txt",
+      "migrated_at": "2025-06-26T12:20:19.223228"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_ネオンサインについて.txt",
+      "new_path": "data/sources/notion/notion_20250612_ネオンサインについて.txt",
+      "migrated_at": "2025-06-26T12:20:19.223531"
+    },
+    {
+      "old_path": "data/00_new/notion_20250624_事業展開と共同出資の検討会議.txt",
+      "new_path": "data/sources/notion/notion_20250624_事業展開と共同出資の検討会議.txt",
+      "migrated_at": "2025-06-26T12:20:19.223753"
+    },
+    {
+      "old_path": "data/00_new/notion_20250619_6月19日会議録.txt",
+      "new_path": "data/sources/notion/notion_20250619_6月19日会議録.txt",
+      "migrated_at": "2025-06-26T12:20:19.223941"
+    },
+    {
+      "old_path": "data/00_new/notion_20250619_フロア材質とメンテナンス対策の検討会議.txt",
+      "new_path": "data/sources/notion/notion_20250619_フロア材質とメンテナンス対策の検討会議.txt",
+      "migrated_at": "2025-06-26T12:20:19.224178"
+    },
+    {
+      "old_path": "data/00_new/notion_20250625_6月25日3.txt",
+      "new_path": "data/sources/notion/notion_20250625_6月25日3.txt",
+      "migrated_at": "2025-06-26T12:20:19.224362"
+    },
+    {
+      "old_path": "data/00_new/notion_20250625_6月25日2.txt",
+      "new_path": "data/sources/notion/notion_20250625_6月25日2.txt",
+      "migrated_at": "2025-06-26T12:20:19.224552"
+    },
+    {
+      "old_path": "data/00_new/notion_20250626_バイトル求人改善MTG.txt",
+      "new_path": "data/sources/notion/notion_20250626_バイトル求人改善MTG.txt",
+      "migrated_at": "2025-06-26T12:20:19.224888"
+    },
+    {
+      "old_path": "data/00_new/notion_20250625_6月25日.txt",
+      "new_path": "data/sources/notion/notion_20250625_6月25日.txt",
+      "migrated_at": "2025-06-26T12:20:19.225159"
+    },
+    {
+      "old_path": "data/00_new/notion_20250613_四ノ宮.txt",
+      "new_path": "data/sources/notion/notion_20250613_四ノ宮.txt",
+      "migrated_at": "2025-06-26T12:20:19.225450"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_統合議事録.txt",
+      "new_path": "data/sources/notion/notion_20250612_統合議事録.txt",
+      "migrated_at": "2025-06-26T12:20:19.225772"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_染谷さんCTIシステムに関する質問.txt",
+      "new_path": "data/sources/notion/notion_20250612_染谷さんCTIシステムに関する質問.txt",
+      "migrated_at": "2025-06-26T12:20:19.226024"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_LED事業拡大およびAI導入に関する打ち合わせ.txt",
+      "new_path": "data/sources/notion/notion_20250612_LED事業拡大およびAI導入に関する打ち合わせ.txt",
+      "migrated_at": "2025-06-26T12:20:19.226281"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_[染谷さん、末武さん] 会議 会議記録.txt",
+      "new_path": "data/sources/notion/notion_20250612_[染谷さん、末武さん] 会議 会議記録.txt",
+      "migrated_at": "2025-06-26T12:20:19.226534"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_業務効率化・AI導入検討会議 議事録.txt",
+      "new_path": "data/sources/notion/notion_20250612_業務効率化・AI導入検討会議 議事録.txt",
+      "migrated_at": "2025-06-26T12:20:19.226701"
+    },
+    {
+      "old_path": "data/00_new/notion_20250618_事務員面接概要.txt",
+      "new_path": "data/sources/notion/notion_20250618_事務員面接概要.txt",
+      "migrated_at": "2025-06-26T12:20:19.226882"
+    },
+    {
+      "old_path": "data/00_new/notion_20250618_6月18日（事務）.txt",
+      "new_path": "data/sources/notion/notion_20250618_6月18日（事務）.txt",
+      "migrated_at": "2025-06-26T12:20:19.227039"
+    },
+    {
+      "old_path": "data/00_new/notion_20250613_磯ケ谷さんからのヒアリング内容.txt",
+      "new_path": "data/sources/notion/notion_20250613_磯ケ谷さんからのヒアリング内容.txt",
+      "migrated_at": "2025-06-26T12:20:19.227357"
+    },
+    {
+      "old_path": "data/00_new/notion_20250616_求人改善MTG（バイトルNEXT）.txt",
+      "new_path": "data/sources/notion/notion_20250616_求人改善MTG（バイトルNEXT）.txt",
+      "migrated_at": "2025-06-26T12:20:19.227807"
+    },
+    {
+      "old_path": "data/00_new/notion_20250618_6月18日.txt",
+      "new_path": "data/sources/notion/notion_20250618_6月18日.txt",
+      "migrated_at": "2025-06-26T12:20:19.228124"
+    },
+    {
+      "old_path": "data/00_new/notion_20250612_採用戦略と従業員体験の改善に関する会議.txt",
+      "new_path": "data/sources/notion/notion_20250612_採用戦略と従業員体験の改善に関する会議.txt",
+      "migrated_at": "2025-06-26T12:20:19.228366"
+    }
+  ],
+  "last_migration": "2025-06-26T12:20:19.228668"
 }

@@ -28,8 +28,13 @@ class DataManager:
         self.archive_dir = self.base_dir / "02_archive"
         self.log_file = self.base_dir / "analysis_log.json"
         
+        # 外部データソース管理（シンプルに）
+        self.sources_dir = self.base_dir / "sources"
+        self.notion_dir = self.sources_dir / "notion"
+        
         # ディレクトリ作成
-        for dir_path in [self.new_dir, self.analyzed_dir, self.archive_dir]:
+        for dir_path in [self.new_dir, self.analyzed_dir, self.archive_dir, 
+                        self.sources_dir, self.notion_dir]:
             dir_path.mkdir(parents=True, exist_ok=True)
             
         # ログファイル初期化
@@ -88,7 +93,7 @@ class DataManager:
         return self.get_file_type(file_path) == 'audio'
     
     def get_new_files(self) -> List[Path]:
-        """未処理ファイルのリストを取得"""
+        """未処理ファイルのリストを取得（00_new + notion/raw）"""
         files = []
         # テキストファイル拡張子
         text_extensions = ['*.txt', '*.json', '*.csv', '*.log', '*.md', '*.docx', '*.doc', '*.pdf']
@@ -99,8 +104,24 @@ class DataManager:
         
         all_extensions = text_extensions + audio_extensions + email_extensions
         
+        # 00_newディレクトリから取得
         for ext in all_extensions:
             files.extend(self.new_dir.glob(ext))
+            
+        # Notion rawディレクトリからも取得
+        for ext in text_extensions:  # Notionは主にテキストファイル
+            files.extend(self.notion_dir.glob(ext))
+        
+        return sorted(files)
+    
+    def get_notion_files(self) -> List[Path]:
+        """Notion未処理ファイルのリストを取得"""
+        files = []
+        text_extensions = ['*.txt', '*.json', '*.md']
+        
+        for ext in text_extensions:
+            files.extend(self.notion_dir.glob(ext))
+        
         return sorted(files)
     
     def check_duplicate(self, file_path: Path) -> Tuple[bool, Optional[str]]:
