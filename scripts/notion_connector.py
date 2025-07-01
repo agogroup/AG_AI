@@ -221,6 +221,9 @@ URL: {page.get('url', '')}
             filepath.write_text(full_content, encoding='utf-8')
             print(f"✅ 議事録を保存しました: {filepath}")
             
+            # ログに記録（重複防止のため）
+            self._log_processed_page(page_id, str(filepath))
+            
             return filepath
             
         except Exception as e:
@@ -281,7 +284,16 @@ URL: {page.get('url', '')}
         Returns:
             True: 既に処理済み、False: 未処理
         """
-        # analysis_log.jsonをチェック
+        # 1. 既存ファイルをチェック（ページIDがファイル内容に含まれているか）
+        for existing_file in self.data_dir.glob("notion_*.txt"):
+            try:
+                content = existing_file.read_text(encoding='utf-8')
+                if f"ページID: {page_id}" in content:
+                    return True
+            except Exception:
+                continue
+        
+        # 2. analysis_log.jsonをチェック
         log_file = Path("data/analysis_log.json")
         if log_file.exists():
             try:
@@ -294,6 +306,40 @@ URL: {page.get('url', '')}
                 pass
         
         return False
+    
+    def _log_processed_page(self, page_id: str, filepath: str) -> None:
+        """
+        処理済みページをログに記録
+        
+        Args:
+            page_id: NotionページID
+            filepath: 保存したファイルパス
+        """
+        log_file = Path("data/analysis_log.json")
+        
+        # 既存ログを読み込み
+        log_data = []
+        if log_file.exists():
+            try:
+                log_data = json.loads(log_file.read_text(encoding='utf-8'))
+            except Exception:
+                log_data = []
+        
+        # 新しいエントリを追加
+        new_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "source": "notion",
+            "page_id": page_id,
+            "filepath": filepath,
+            "status": "synced"
+        }
+        log_data.append(new_entry)
+        
+        # ログファイルに保存
+        try:
+            log_file.write_text(json.dumps(log_data, indent=2, ensure_ascii=False), encoding='utf-8')
+        except Exception as e:
+            print(f"⚠️ ログ記録エラー: {e}")
 
 
 # 使用例
